@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="AHacxuCQjKzOiLhyFDP3Dr" LanguageVersion="2021.4.10.1018" Version="0.128">
+  <Patch Id="RhtwFx6IgiHPwghcfOQBaJ">
+    <Canvas Id="CneYNhMNAkWK9mbC5DSSyh" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="CXUhcBJkdEPPRoyEDR3f1b">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="MkIHaqMihiRON6g57V30z8">
+        <Canvas Id="CrOY9QNs4wUOQc1c2nrXA7" CanvasType="Group">
+          <Pad Id="DUUjIaswplrOfGMQi7LFqU" Comment="Password" Bounds="48,-89,41,17" ShowValueBox="true" isIOBox="true" Value="">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="BUO2SUwySrkPFHAMk9ksJ6" Comment="Database" Bounds="67,-17,76,18" ShowValueBox="true" isIOBox="true" Value="">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="ICIpRDvwQZoLNpbTMfmfNE" Comment="Open" Bounds="289,28,39,43" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="AyTfRoSZhXWPPtV78SVf77" Comment="Close" Bounds="424,34,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="-16,101,105,19" Id="SFeOAq7xNyLMMIurz1o9Li">
+            <p:NodeReference LastCategoryFullName="VL.MySQL.Connection" LastSymbolSource="VL.MySQL.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MySQL" />
+            </p:NodeReference>
+            <Pin Id="FTLI2MMDdM9LhCgTImVysS" Name="Server" Kind="InputPin" DefaultValue="127.0.0.1" />
+            <Pin Id="D1vIwoxo40HOdx0fJPGIsA" Name="Port" Kind="InputPin" />
+            <Pin Id="AJ29Zdd7oSyOQ5sxDuXLes" Name="User" Kind="InputPin" />
+            <Pin Id="RlXQ2kJyJhjNQG1jSXZV3t" Name="Password" Kind="InputPin" />
+            <Pin Id="HIVxxWEL67qLzp9RncAd0S" Name="Database" Kind="InputPin" />
+            <Pin Id="OK0G4kBwlbaMUIyiDTszU5" Name="ClearAll" Kind="InputPin" />
+            <Pin Id="EbQQdPCFVKpQSJfUHx2cMZ" Name="Open" Kind="InputPin" />
+            <Pin Id="Ihn5L0mCFI2LiaZ2bGApCq" Name="Close" Kind="InputPin" />
+            <Pin Id="UfNQqhU8JN5NdgORhYrh4B" Name="ClearPool" Kind="InputPin" />
+            <Pin Id="IQZGS4s2ECrLpHc6TducqY" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="NnnrtDIcGNDMPy12PTTMvM" Name="State" Kind="OutputPin" />
+          </Node>
+          <Pad Id="PYAgpxyoAqZPA01YMZZzxM" Comment="State" Bounds="144,199,80,19" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="R9IpuM1QzAvL5n4goX30PE" Comment="User" Bounds="25,-181,35,15" ShowValueBox="true" isIOBox="true" Value="">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="GQW548kK47xNmVMYrGgWzo" Bounds="18,-211,137,19" ShowValueBox="true" isIOBox="true" Value="1. Set your Username">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="ROompOM02cHMZIetaKbsm9" Bounds="35,-117,112,19" ShowValueBox="true" isIOBox="true" Value="2. your Password">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="JnW8xhYvn3xOvh6Raki0W8" Comment="Server" Bounds="-15,-282,53,15" ShowValueBox="true" isIOBox="true" Value="127.0.0.1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="AXewcEpC0zbQGS2SJG34qr" Comment="Port" Bounds="1,-254,35,15" ShowValueBox="true" isIOBox="true" Value="3306">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Integer32 (Unsigned)" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="ErHTBKFm6kOMaXS60ynZTZ" Bounds="57,-44,265,19" ShowValueBox="true" isIOBox="true" Value="3. the DataBase name you want to reach">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="DclVCGgoecJLxGguJ0UaKJ" Name="Create" />
+        <Patch Id="HcDgwmTM92tNSSdRWE8nVL" Name="Update" />
+        <ProcessDefinition Id="FdjywxJEZGnN0tYyeKvotr">
+          <Fragment Id="S9FdzQOZ6lOL1JxXh3gOOM" Patch="DclVCGgoecJLxGguJ0UaKJ" Enabled="true" />
+          <Fragment Id="CHrXA47A5ZkLtW5OGIIvU6" Patch="HcDgwmTM92tNSSdRWE8nVL" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="GzCUInrpLW5NKaRSsMM4hm" Ids="DUUjIaswplrOfGMQi7LFqU,RlXQ2kJyJhjNQG1jSXZV3t" />
+        <Link Id="L2yh3WcpbHwLISvp41kvKK" Ids="BUO2SUwySrkPFHAMk9ksJ6,HIVxxWEL67qLzp9RncAd0S" />
+        <Link Id="T62NRLk8pYXQXDASWLXOyn" Ids="ICIpRDvwQZoLNpbTMfmfNE,EbQQdPCFVKpQSJfUHx2cMZ" />
+        <Link Id="TStghpQJcpZO5J37yrOmdh" Ids="AyTfRoSZhXWPPtV78SVf77,Ihn5L0mCFI2LiaZ2bGApCq" />
+        <Link Id="JNqugp2F1SAMPKStUbVPQb" Ids="NnnrtDIcGNDMPy12PTTMvM,PYAgpxyoAqZPA01YMZZzxM" />
+        <Link Id="V3328YVY2ktOzMU8taleVN" Ids="R9IpuM1QzAvL5n4goX30PE,AJ29Zdd7oSyOQ5sxDuXLes" />
+        <Link Id="BfEXPYEv7iaQYGmOPIUNNB" Ids="JnW8xhYvn3xOvh6Raki0W8,FTLI2MMDdM9LhCgTImVysS" />
+        <Link Id="AfsP5Rplr8OLJ8XWlbqyOP" Ids="AXewcEpC0zbQGS2SJG34qr,D1vIwoxo40HOdx0fJPGIsA" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="Nb0PczT7AoZOWllsCU2h6T" Location="VL.CoreLib" Version="2021.4.10-1018-g933c4b477f" />
+  <NugetDependency Id="EpFbtz4lftmMrrzQt02reC" Location="VL.MySQL" Version="0.0.0.0" />
+</Document>
