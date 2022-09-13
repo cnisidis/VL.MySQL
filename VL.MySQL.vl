@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="BDfHgg8fgrPNqf280rRB7t" LanguageVersion="2021.4.10.1018" Version="0.128">
+<Document xmlns:p="property" Id="BDfHgg8fgrPNqf280rRB7t" LanguageVersion="2021.4.8.940" Version="0.128">
   <Patch Id="DZllxQneF9yMdOHyJTbszB">
     <Canvas Id="LlQmL1b1fO6MUy6mTcs01s" DefaultCategory="VL.MySQL" CanvasType="FullCategory">
       <Canvas Id="QwcA0klQC1bLNTz3tV1gD8" Name="Connection" Position="320,218">
@@ -2561,7 +2561,7 @@
                           <Patch Id="OVAAbWB6DIELIl6UCV3j3r" Name="Update" ManuallySortedPins="true" />
                           <Patch Id="BQIaN9MMp8cNR7WON1OIQa" Name="Dispose" ManuallySortedPins="true" />
                           <Node Bounds="1075,600,109,26" Id="Sf1wpgL1NwvMv5wGSPw8F1">
-                            <p:NodeReference LastCategoryFullName="MySqlConnector.MySqlParameterCollection" LastSymbolSource="MySqlConnector.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                            <p:NodeReference LastCategoryFullName="MySqlConnector.MySqlParameterCollection" LastSymbolSource="MySqlConnector.dll">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <Choice Kind="OperationCallFlag" Name="Add" />
                               <CategoryReference Kind="AssemblyCategory" Name="MySqlParameterCollection" NeedsToBeDirectParent="true" />
@@ -2754,7 +2754,7 @@
                                 <Pin Id="Vy4paGiWtxJOA7c25BgBj0" Name="Value" Kind="OutputPin" />
                               </Node>
                               <Node Bounds="1126,1015,109,26" Id="D1W2G9eFm2ENMj0wvu5SAf">
-                                <p:NodeReference LastCategoryFullName="MySqlConnector.MySqlParameterCollection" LastSymbolSource="MySqlConnector.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                                <p:NodeReference LastCategoryFullName="MySqlConnector.MySqlParameterCollection" LastSymbolSource="MySqlConnector.dll">
                                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                                   <CategoryReference Kind="AssemblyCategory" Name="MySqlParameterCollection" />
                                   <Choice Kind="OperationCallFlag" Name="Add" />
@@ -3041,7 +3041,7 @@
                           <Pin Id="PAPW2mqU48hMDGcgkgPrD9" Name="Result" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="779,889,52,26" Id="CDBNZOYSqn6OoSGdIL3uPp">
-                          <p:NodeReference LastCategoryFullName="System.Data.DataRow" LastSymbolSource="System.Data.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                          <p:NodeReference LastCategoryFullName="System.Data.DataRow" LastSymbolSource="System.Data.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="DataRow" />
                             <Choice Kind="OperationCallFlag" Name="GetItem" />
@@ -3161,7 +3161,7 @@
         <Patch Id="CLjxQ8QIqxFLY6TNPSfqUY">
           <Canvas Id="Ax3nLFPCimIMzzYkcOiK0E" CanvasType="Group">
             <ControlPoint Id="T8zUovFYZhzMFN4wqjkle1" Bounds="994,170" />
-            <Node Bounds="620,290,591,534" Id="NuEZ4ALd4RHQG9L0cMdt4d">
+            <Node Bounds="620,290,777,534" Id="NuEZ4ALd4RHQG9L0cMdt4d">
               <p:NodeReference>
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                 <FullNameCategoryReference ID="Primitive" />
@@ -3285,7 +3285,7 @@
                       <Pin Id="OaDvqgB06DuM5Wv6zdk2o2" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="TyusJeWc93AMWuxj4VdvhM" Name="Field Count" Kind="OutputPin" />
                     </Node>
-                    <Node Bounds="690,603,154,180" Id="LI6CELdyy4IPdG6ae5ziHR">
+                    <Node Bounds="688,603,156,180" Id="LI6CELdyy4IPdG6ae5ziHR">
                       <p:NodeReference>
                         <Choice Kind="ApplicationStatefulRegion" Name="Repeat" />
                         <FullNameCategoryReference ID="Primitive" />
@@ -3329,9 +3329,21 @@
                           <Pin Id="BL64YCf57apPZr6FwzNDQK" Name="Input" Kind="InputPin" />
                           <Pin Id="HHTBedFyiTKMsWqd7N8D59" Name="Result" Kind="OutputPin" />
                         </Node>
+                        <Node Bounds="700,722,60,26" Id="UKkUKfaLFyxMM1U4HriXhl">
+                          <p:NodeReference LastCategoryFullName="VL.MySQL.IDataRecord" LastSymbolSource="VL.MySQL.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <CategoryReference Kind="MutableInterfaceType" Name="IDataRecord" />
+                            <Choice Kind="OperationCallFlag" Name="GetName" />
+                          </p:NodeReference>
+                          <Pin Id="J7jAa4CsLoyPw4FYXFAKE6" Name="Input" Kind="StateInputPin" />
+                          <Pin Id="VB2pUFbHdewQO0wTofXdP9" Name="I" Kind="InputPin" />
+                          <Pin Id="Rb1ROsGEadTPVrbKrK0IRH" Name="Output" Kind="StateOutputPin" />
+                          <Pin Id="RiDjLUcoQgGOfdF6lNlQwg" Name="Result" Kind="OutputPin" />
+                        </Node>
                       </Patch>
                       <ControlPoint Id="Pj2AS52s1IqOMIAwnrYRWB" Bounds="798,778" Alignment="Bottom" />
                       <ControlPoint Id="StLWQutB9eCLXke6xxZdlV" Bounds="772,778" Alignment="Bottom" />
+                      <ControlPoint Id="P582qF3Pc1xPtUQwYweZV5" Bounds="739,778" Alignment="Bottom" />
                     </Node>
                   </Patch>
                   <ControlPoint Id="GgF01HMaLkQPUNzfhs4CvV" Bounds="772,798" Alignment="Bottom" />
@@ -3340,8 +3352,10 @@
                   <ControlPoint Id="VEGlJqJ11hTQN5cwQK2WXF" Bounds="796,460" Alignment="Top" />
                   <ControlPoint Id="DwucPJNzxG0OWlJwD1YBll" Bounds="1101,798" Alignment="Bottom" />
                   <ControlPoint Id="LTgPTOKI97tMaJU2apQ69k" Bounds="1101,460" Alignment="Top" />
+                  <ControlPoint Id="AGJHj4nWZkkLg0sOuqroZ5" Bounds="737,798" Alignment="Bottom" />
+                  <ControlPoint Id="IRjIgXzEFc4PPGrx84ZeeU" Bounds="737,460" Alignment="Top" />
                 </Node>
-                <Node Bounds="647,404,65,19" Id="HnkMbX1kGEmOuVFL9UURrX">
+                <Node Bounds="636,400,65,19" Id="HnkMbX1kGEmOuVFL9UURrX">
                   <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="IsAssigned" />
@@ -3356,6 +3370,7 @@
               <ControlPoint Id="I0fyThslM9ZNilgVEqyqyg" Bounds="799,818" Alignment="Bottom" />
               <ControlPoint Id="RV0c224A912LzwWdzEkZJ6" Bounds="772,818" Alignment="Bottom" />
               <ControlPoint Id="A90RA9YjgjLOC62PgYazbC" Bounds="862,296" Alignment="Top" />
+              <ControlPoint Id="CVmRGHNPOCaNmpBSZWk4Y4" Bounds="714,818" Alignment="Bottom" />
             </Node>
             <ControlPoint Id="SgmZdDzIejGOXB8NROQx61" Bounds="1101,880" />
             <ControlPoint Id="OJgbK5BuvAGL79t1cYPdXy" Bounds="800,871" />
@@ -3370,6 +3385,7 @@
               <Pin Id="BtTHCahSKkvP6FOaZRrRb2" Name="Input" Kind="StateInputPin" />
               <Pin Id="Hel8qSewyUBNoVGSW1W1j8" Name="Count" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="EJQv5uZkg7OM7xhsPkVHwa" Bounds="675,877" />
           </Canvas>
           <ProcessDefinition Id="ENlR4dqtff2OZpb4QHPBWn">
             <Fragment Id="Nw5SyZvgSsGP3xvz6Xzluq" Patch="Qkx8Zn31vigNIXdOxdFgik" Enabled="true" />
@@ -3389,14 +3405,6 @@
           <Link Id="TvmxCDOHFUTOPOvhNLv2q0" Ids="Mosj5LNUgdvQWiNP8eq8Lu,D7PCC4mTjKBMw7jmHnPzxj" IsHidden="true" />
           <Link Id="D6RCFwV7JvRN9Gfkklnl8v" Ids="R7nyIcUpyQhMcGgtU5t9nu,BeGRHpWhWrNLvHX5u9vKz8" />
           <Link Id="VNnMzMW3MAuP9slJXV90Ij" Ids="ItvJhb7EPMvOitQmCJ5aKM,R7nyIcUpyQhMcGgtU5t9nu" IsHidden="true" />
-          <Patch Id="Qkx8Zn31vigNIXdOxdFgik" Name="Create" />
-          <Patch Id="OMezprPUq1TNXhoLrHxeka" Name="Update">
-            <Pin Id="ItvJhb7EPMvOitQmCJ5aKM" Name="Update" Kind="InputPin" Bounds="589,182" />
-            <Pin Id="DZKARSsNzlmLxizwurJScy" Name="Results" Kind="InputPin" Bounds="987,200" />
-            <Pin Id="D7PCC4mTjKBMw7jmHnPzxj" Name="Type" Kind="OutputPin" Bounds="776,870" />
-            <Pin Id="H9QyS07u7EcLisYb118uE1" Name="TypeName" Kind="OutputPin" Bounds="801,873" />
-            <Pin Id="BacCQpN1oGxLhj2txOzM67" Name="Value" Kind="OutputPin" Bounds="1099,913" />
-          </Patch>
           <Link Id="Nn2d8qaXNtDOrqpNIxBvuz" Ids="T8zUovFYZhzMFN4wqjkle1,BtTHCahSKkvP6FOaZRrRb2" />
           <Link Id="E4ypfvaJHB3MmoMfKzc6cs" Ids="Hel8qSewyUBNoVGSW1W1j8,A90RA9YjgjLOC62PgYazbC" />
           <Link Id="KfAtlPUYdajL2ZQvFHMmot" Ids="Dnhfw3dzKNfNSJjepaKY27,NVc1DxSFCVOMcM6bgtrQF8" />
@@ -3428,6 +3436,23 @@
           <Link Id="CO8LoQyvAEmMWLpDbZVwVj" Ids="LTgPTOKI97tMaJU2apQ69k,DwucPJNzxG0OWlJwD1YBll" IsFeedback="true" />
           <Link Id="ApXWklPdleILFOzwXm5cvu" Ids="DBsiQf4vKD8LUy1ERh9ICD,DwucPJNzxG0OWlJwD1YBll" />
           <Link Id="PXUDGKX7E1MMrg2ERbPCEf" Ids="DwucPJNzxG0OWlJwD1YBll,FRt52RKvx73O9OsBZsfgxl" />
+          <Link Id="VuMgB0eysncMajIDiYkZYH" Ids="M7BCuysUFPvLr9IgromRM9,J7jAa4CsLoyPw4FYXFAKE6" />
+          <Link Id="PQCcRbG5xlVLdYLRir9pZS" Ids="AsQwV9AwEIoPffv7Rd6TkO,VB2pUFbHdewQO0wTofXdP9" />
+          <Link Id="GAmRHZPAU1YNJGeQoTeHnk" Ids="RiDjLUcoQgGOfdF6lNlQwg,P582qF3Pc1xPtUQwYweZV5" />
+          <Link Id="VebVNe1ZF8nMqU4SJ5vxED" Ids="IRjIgXzEFc4PPGrx84ZeeU,AGJHj4nWZkkLg0sOuqroZ5" IsFeedback="true" />
+          <Link Id="C5xqHtN05EcQcI2Y34xC3C" Ids="P582qF3Pc1xPtUQwYweZV5,AGJHj4nWZkkLg0sOuqroZ5" />
+          <Link Id="AVPcKARlKLRPYOMqjBDpAh" Ids="AGJHj4nWZkkLg0sOuqroZ5,CVmRGHNPOCaNmpBSZWk4Y4" />
+          <Link Id="UZr7r2Adk2QQIlSHeBd3hN" Ids="CVmRGHNPOCaNmpBSZWk4Y4,EJQv5uZkg7OM7xhsPkVHwa" />
+          <Link Id="Nm9fpzW6SIlO0DicA7Vn20" Ids="EJQv5uZkg7OM7xhsPkVHwa,P3pYPetiuDbOrnzGvkdoA7" IsHidden="true" />
+          <Patch Id="Qkx8Zn31vigNIXdOxdFgik" Name="Create" />
+          <Patch Id="OMezprPUq1TNXhoLrHxeka" Name="Update">
+            <Pin Id="ItvJhb7EPMvOitQmCJ5aKM" Name="Update" Kind="InputPin" Bounds="589,182" />
+            <Pin Id="DZKARSsNzlmLxizwurJScy" Name="Results" Kind="InputPin" Bounds="987,200" />
+            <Pin Id="P3pYPetiuDbOrnzGvkdoA7" Name="ColumnName" Kind="OutputPin" Bounds="675,877" />
+            <Pin Id="D7PCC4mTjKBMw7jmHnPzxj" Name="Type" Kind="OutputPin" Bounds="776,870" />
+            <Pin Id="H9QyS07u7EcLisYb118uE1" Name="TypeName" Kind="OutputPin" Bounds="801,873" />
+            <Pin Id="BacCQpN1oGxLhj2txOzM67" Name="Value" Kind="OutputPin" Bounds="1099,913" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -3462,7 +3487,7 @@
                     <Patch Id="BIa6hgfnj0zPpwX3MCR6Fb" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="S7hnUuxX4FZLZDFDw4XDco" Name="Then" ManuallySortedPins="true" />
                     <Node Bounds="442,332,74,26" Id="JoJ9VuxueZdORmwxdeSa3e">
-                      <p:NodeReference LastCategoryFullName="MySqlConnector.MySqlCommand" LastSymbolSource="MySqlConnector.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                      <p:NodeReference LastCategoryFullName="MySqlConnector.MySqlCommand" LastSymbolSource="MySqlConnector.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="MySqlCommand" />
                         <Choice Kind="OperationCallFlag" Name="Create" />
@@ -3754,11 +3779,6 @@
             </Node>
             <ControlPoint Id="VnNCGjdu2tNPVRGLsuA5Po" Bounds="821,1095" />
           </Canvas>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="BldYKhoWiXBNdxsgjbmyv0">
             <Fragment Id="H5CeBts8RnUOIjoaRWxIlx" Patch="POILcpv0hU0NHMhTV7uor5" Enabled="true" />
             <Fragment Id="FuEnMM08a7wQENNJDFma1T" Patch="Td17dEN2d7sPvl7t5GZqcJ" Enabled="true" />
@@ -4345,6 +4365,7 @@
             </p:NodeReference>
             <Pin Id="CfEXaWcRpqCMQUfDFyJkx0" Name="Update" Kind="InputPin" DefaultValue="False" />
             <Pin Id="DSrzvKUg02fQMedDZqONxk" Name="Results" Kind="InputPin" />
+            <Pin Id="DeHNgsP7ibXQUTwgFFfKvz" Name="ColumnName" Kind="OutputPin" />
             <Pin Id="FWBh0ZUy7aEP5OjfarJfk1" Name="Type" Kind="OutputPin" />
             <Pin Id="Tq7BuCUsu1ZL1aAObmjGIb" Name="TypeName" Kind="OutputPin" />
             <Pin Id="MOJ1wqcnec6OeuvT1jVdbU" Name="Value" Kind="OutputPin" />
@@ -4356,6 +4377,7 @@
             </p:NodeReference>
             <Pin Id="QT2U2tWavdPNNIfGd2fdi0" Name="Update" Kind="InputPin" DefaultValue="False" />
             <Pin Id="TaHBI3SkmdRLrcUPmSz4At" Name="Results" Kind="InputPin" />
+            <Pin Id="SRqAVCS0HPEPbczIylPXhM" Name="ColumnName" Kind="OutputPin" />
             <Pin Id="MjbajRFkp5JLroCtETXDon" Name="Type" Kind="OutputPin" />
             <Pin Id="SBTYeswmJaOLMM7BAwEkAf" Name="TypeName" Kind="OutputPin" />
             <Pin Id="LYugXTQqVQINRz1OqphT8h" Name="Value" Kind="OutputPin" />
@@ -4590,7 +4612,7 @@
               <Patch Id="EzVRALhwNvCNk59nCJLT3T" Name="Create" ManuallySortedPins="true" />
               <Patch Id="Hw1T1iAY2sKPElxLIVKiuD" Name="Then" ManuallySortedPins="true" />
               <Node Bounds="1425,842,109,26" Id="HwpQpEh687OObmazjYplaM">
-                <p:NodeReference LastCategoryFullName="MySqlConnector.MySqlParameterCollection" LastSymbolSource="MySqlConnector.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                <p:NodeReference LastCategoryFullName="MySqlConnector.MySqlParameterCollection" LastSymbolSource="MySqlConnector.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="MySqlParameterCollection" />
                   <Choice Kind="OperationCallFlag" Name="Add" />
@@ -4823,7 +4845,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="OLb9FfU7krHMaPMBFnMhmW" Location="VL.CoreLib" Version="2021.4.10-1018-g933c4b477f" />
+  <NugetDependency Id="OLb9FfU7krHMaPMBFnMhmW" Location="VL.CoreLib" Version="2021.4.8-0940-g49c97a1c2c" />
   <NugetDependency Id="BZdLGdaJqozMwQsO7fkKUp" Location="MySqlConnector" Version="2.1.7" />
   <PlatformDependency Id="SuEEsTKZYF0QE5DfjnVQFE" Location="System.Data" IsForward="true" />
 </Document>
