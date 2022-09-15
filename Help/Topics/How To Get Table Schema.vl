@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="VDV2B7vtsqHNemwdLsbvMn" LanguageVersion="2021.4.11.1112" Version="0.128">
+  <Patch Id="AIBiyKSdLXOMygmP1eovCX">
+    <Canvas Id="IaF20TGJx45Lh4nZDCSWsz" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="ET6QgxoNJRNQczFJmNOJTr">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="EZZA32cLbe3OJX0Y8WlZHm">
+        <Canvas Id="EbpWtH4q1QAQJUB2Quh1us" CanvasType="Group">
+          <Node Bounds="434,442,165,19" Id="BkuqngbBAkkNMK3bPdffd3">
+            <p:NodeReference LastCategoryFullName="VL.MySQL.Connection" LastSymbolSource="VL.MySQL.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MySQLConnector" />
+            </p:NodeReference>
+            <Pin Id="K9e9j0E4WsPNzhUc6Cathf" Name="Server" Kind="InputPin" />
+            <Pin Id="RQUF0euUpwDQZ4wDTCcWdl" Name="User" Kind="InputPin" DefaultValue="root" />
+            <Pin Id="Kv2cyfzeQVWPjD82AfZc7b" Name="Password" Kind="InputPin" DefaultValue="" />
+            <Pin Id="UyXAo341BRnMs5mAvLzplB" Name="Database" Kind="InputPin" DefaultValue="" />
+            <Pin Id="N7KcVmYrFWyL7c2DU5Q99x" Name="AllowUserVariables" Kind="InputPin" />
+            <Pin Id="OlxUCrc3fn4Oii1PAxspJs" Name="ClearAll" Kind="InputPin" />
+            <Pin Id="Go67AwBvBhrOOTU9Eu0YT9" Name="Open" Kind="InputPin" />
+            <Pin Id="Pht4SPHBfDHMSdG9mMuFCu" Name="Close" Kind="InputPin" />
+            <Pin Id="C95AFJJNo3GOqFsfJNcFsm" Name="ClearPool" Kind="InputPin" />
+            <Pin Id="Kgi1y3pJFwtODbf4JK0Y3Z" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="GO6pUCzQDBNOiXuaT4XdGi" Name="State" Kind="OutputPin" />
+          </Node>
+          <Pad Id="P8hgbiGVAlVMyJSIrZs1bE" Comment="Open" Bounds="556,382,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="MQRcQ3Gf3grNmeZlXe3ijV" Comment="State" Bounds="595,493,88,17" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="434,673,125,19" Id="Pv0g4vg1FoFMxfkXNpkB9d">
+            <p:NodeReference LastCategoryFullName="VL.MySQL.Commands" LastSymbolSource="VL.MySQL.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="TableSchema" />
+            </p:NodeReference>
+            <Pin Id="My87ZTMzyMPL09swQeNNHO" Name="MySQL" Kind="InputPin" />
+            <Pin Id="CdcvEgYhRlcOIFuSFV4QXd" Name="Table Name" Kind="InputPin" DefaultValue="" />
+            <Pin Id="L9hzTWrwuklLCUd98vb8bt" Name="Apply" Kind="InputPin" />
+            <Pin Id="HFsUf1mTHunQUxYFu0qXoS" Name="Table Schema" Kind="OutputPin" />
+            <Pin Id="TQIxNvuWDVSM2QeTMwFrvF" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="B707Qs96iXvOYcNUkQgZSr" Comment="Table Schema" Bounds="434,739,239,121" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">35</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item />
+            </p:Value>
+          </Pad>
+          <Pad Id="LzcjUZbtzslN9dfcGk0h4I" SlotId="K0aLyqGjW1VM152YTn0Es8" Bounds="436,512" />
+          <Pad Id="LlV2OWdCIjtMcKqh0rAe5y" SlotId="K0aLyqGjW1VM152YTn0Es8" Bounds="435,624" />
+          <Pad Id="Q7Z6X9SzXd6Paa42df5pqU" Comment="Apply" Bounds="556,623,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="KnezwEO9vOoPLJ6izke5zy" Name="Create" />
+        <Patch Id="GuXGVak0CnvOg2ICITmClU" Name="Update" />
+        <ProcessDefinition Id="PztLLiti1oDOlqxhkrWJYF">
+          <Fragment Id="OEeqHYzUYOtMRgsDwm0FO0" Patch="KnezwEO9vOoPLJ6izke5zy" Enabled="true" />
+          <Fragment Id="GoZ8ls4j76tL7SyT21HVVh" Patch="GuXGVak0CnvOg2ICITmClU" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="JSJ9iMWKCwJPZ09zmijuaG" Ids="P8hgbiGVAlVMyJSIrZs1bE,Go67AwBvBhrOOTU9Eu0YT9" />
+        <Link Id="OKgECxQdQnhNnIpY9XD19P" Ids="GO6pUCzQDBNOiXuaT4XdGi,MQRcQ3Gf3grNmeZlXe3ijV" />
+        <Link Id="GOMnptnYBzeNSHeFjVzevR" Ids="HFsUf1mTHunQUxYFu0qXoS,B707Qs96iXvOYcNUkQgZSr" />
+        <Slot Id="K0aLyqGjW1VM152YTn0Es8" Name="MySQL" />
+        <Link Id="OFT1wNsd28sPeZ0thl3xmV" Ids="Kgi1y3pJFwtODbf4JK0Y3Z,LzcjUZbtzslN9dfcGk0h4I" />
+        <Link Id="UqhjUyfDsOWLufVlzzX8Jx" Ids="LlV2OWdCIjtMcKqh0rAe5y,My87ZTMzyMPL09swQeNNHO" />
+        <Link Id="UWbBXEeYOyZNBwKaVK2QeK" Ids="Q7Z6X9SzXd6Paa42df5pqU,L9hzTWrwuklLCUd98vb8bt" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="OOP9396BjGVOfIQcmARwGU" Location="VL.CoreLib" Version="2021.4.11-1112-g53848a3676" />
+  <NugetDependency Id="AFo9Kz8BX8QLrottNzzvRd" Location="VL.MySQL" Version="0.0.0.0" />
+</Document>

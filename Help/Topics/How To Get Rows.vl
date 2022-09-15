@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="AHacxuCQjKzOiLhyFDP3Dr" LanguageVersion="2021.4.10.1018" Version="0.128">
+<Document xmlns:p="property" Id="AHacxuCQjKzOiLhyFDP3Dr" LanguageVersion="2021.4.11.1112" Version="0.128">
   <Patch Id="RhtwFx6IgiHPwghcfOQBaJ">
     <Canvas Id="CneYNhMNAkWK9mbC5DSSyh" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -43,15 +43,16 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="-16,101,105,19" Id="SFeOAq7xNyLMMIurz1o9Li">
-            <p:NodeReference LastCategoryFullName="VL.MySQL.Connection" LastSymbolSource="VL.MySQL.vl">
+            <p:NodeReference LastCategoryFullName="VL.MySQL" LastSymbolSource="VL.MySQL.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="MySQL" />
+              <Choice Kind="ProcessAppFlag" Name="MySQLConnector" />
             </p:NodeReference>
             <Pin Id="FTLI2MMDdM9LhCgTImVysS" Name="Server" Kind="InputPin" DefaultValue="127.0.0.1" />
             <Pin Id="D1vIwoxo40HOdx0fJPGIsA" Name="Port" Kind="InputPin" />
             <Pin Id="AJ29Zdd7oSyOQ5sxDuXLes" Name="User" Kind="InputPin" />
             <Pin Id="RlXQ2kJyJhjNQG1jSXZV3t" Name="Password" Kind="InputPin" />
             <Pin Id="HIVxxWEL67qLzp9RncAd0S" Name="Database" Kind="InputPin" />
+            <Pin Id="DfgoqwFnb63NPpt4GRK3rl" Name="AllowUserVariables" Kind="InputPin" />
             <Pin Id="OK0G4kBwlbaMUIyiDTszU5" Name="ClearAll" Kind="InputPin" />
             <Pin Id="EbQQdPCFVKpQSJfUHx2cMZ" Name="Open" Kind="InputPin" />
             <Pin Id="Ihn5L0mCFI2LiaZ2bGApCq" Name="Close" Kind="InputPin" />
@@ -59,8 +60,8 @@
             <Pin Id="IQZGS4s2ECrLpHc6TducqY" Name="Output" Kind="StateOutputPin" />
             <Pin Id="NnnrtDIcGNDMPy12PTTMvM" Name="State" Kind="OutputPin" />
           </Node>
-          <Pad Id="PYAgpxyoAqZPA01YMZZzxM" Comment="State" Bounds="144,199,80,19" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="R9IpuM1QzAvL5n4goX30PE" Comment="User" Bounds="25,-181,35,15" ShowValueBox="true" isIOBox="true" Value="root">
+          <Pad Id="PYAgpxyoAqZPA01YMZZzxM" Comment="State" Bounds="166,176,80,19" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="R9IpuM1QzAvL5n4goX30PE" Comment="User" Bounds="25,-181,35,15" ShowValueBox="true" isIOBox="true" Value="">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -102,15 +103,15 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="DVfOTWBudRWMDYw9noCWGS" Comment="Command Text" Bounds="5,308,183,15" ShowValueBox="true" isIOBox="true" Value="SELECT * FROM questions">
+          <Pad Id="DVfOTWBudRWMDYw9noCWGS" Comment="Command Text" Bounds="60,322,183,15" ShowValueBox="true" isIOBox="true" Value="SELECT * FROM {your_table_name}">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="-16,490,65,19" Id="B3rapfCsFxyMfHtUBUphUp">
-            <p:NodeReference LastCategoryFullName="VL.MySQL" LastSymbolSource="VL.MySQL.vl">
-              <Choice Kind="ProcessAppFlag" Name="Query" />
+            <p:NodeReference LastCategoryFullName="VL.MySQL.Commands" LastSymbolSource="VL.MySQL.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ExecuteQuery" />
             </p:NodeReference>
             <Pin Id="VbVIG5r08QPPUsxhJ4awE4" Name="MySQL" Kind="InputPin" />
             <Pin Id="A4wLjdQ7l5aN9GFDdq6PaH" Name="Command Text" Kind="InputPin" />
@@ -118,9 +119,8 @@
             <Pin Id="Klxs8OlB9HbPBSRZTNClrD" Name="DataReaderType" Kind="InputPin" />
             <Pin Id="TNuRvPAlLLzQGt0VBI4WLG" Name="Result" Kind="OutputPin" />
             <Pin Id="KUPbu1R9WekQdg3tNRpmqn" Name="In Progress" Kind="OutputPin" />
-            <Pin Id="DN6XcpXoOrWLvsLP3FMqKp" Name="Transaction" Kind="OutputPin" />
           </Node>
-          <Node Bounds="44,440,59,19" Id="UlXBAzzOBWJNGZRs1VjG6g">
+          <Node Bounds="204,443,59,19" Id="UlXBAzzOBWJNGZRs1VjG6g">
             <p:NodeReference>
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="GetRows" />
@@ -128,7 +128,7 @@
             <Pin Id="MoUk4j1bCI7NnKeetiMLIM" Name="MaxReuslts" Kind="InputPin" />
             <Pin Id="Fr3OTOJIirBNcZcxrNQ4UJ" Name="GetRows" Kind="OutputPin" />
           </Node>
-          <Pad Id="MMJkKkCLXRGPW2xq6jvWqw" Comment="Send" Bounds="26,365,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="MMJkKkCLXRGPW2xq6jvWqw" Comment="Send" Bounds="132,395,35,35" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation>
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
@@ -137,13 +137,13 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Ovhdh5L2QF5MEgFBVJNbxU" Comment="In Progress" Bounds="17,554,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Ovhdh5L2QF5MEgFBVJNbxU" Comment="In Progress" Bounds="205,544,35,35" ShowValueBox="true" isIOBox="true" />
           <!--
 
     ************************ GetMyData ************************
 
 -->
-          <Node Name="GetMyData" Bounds="577,84" Id="VusJxzMeKQOOEVkQuFH8vX">
+          <Node Name="GetMyData" Bounds="-161,691" Id="VusJxzMeKQOOEVkQuFH8vX">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="ContainerDefinition" Name="Process" />
             </p:NodeReference>
@@ -287,10 +287,11 @@
                           <Pin Id="ORdHydFMvZqNyhjRFZyR60" Name="Input" Kind="InputPin" />
                           <Pin Id="EETI7mdtyAcNkxwI4UzEFR" Name="Result" Kind="OutputPin" />
                         </Node>
-                        <Node Bounds="568,692,60,26" Id="JgCisQzxiIjNEu9YZLmXrQ">
-                          <p:NodeReference LastCategoryFullName="VL.MySQL.IDataRecord" LastSymbolSource="VL.MySQL.vl">
+                        <Node Bounds="654,736,60,19" Id="JgCisQzxiIjNEu9YZLmXrQ">
+                          <p:NodeReference LastCategoryFullName="VL.MySQL.Forwarded.IDataRecord" LastSymbolSource="VL.MySQL.vl">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="GetName" />
+                            <CategoryReference Kind="MutableInterfaceType" Name="IDataRecord" NeedsToBeDirectParent="true" />
                           </p:NodeReference>
                           <Pin Id="GmhQtBs5EliOya6cE08GJS" Name="Input" Kind="StateInputPin" />
                           <Pin Id="SgjHEulgEAsNyzybsHtoHq" Name="I" Kind="InputPin" />
@@ -385,7 +386,7 @@
             <Pin Id="PqFNaLHQZmZLGBEAVoVpHV" Name="Value" Kind="OutputPin" />
             <Pin Id="AYV6mh8AyiqMzPVxRYyK8S" Name="On Data" Kind="OutputPin" />
           </Node>
-          <Pad Id="JRx47aSIILfNx6e89pDWZk" Comment="" Bounds="14,874,553,164" ShowValueBox="true" isIOBox="true">
+          <Pad Id="JRx47aSIILfNx6e89pDWZk" Comment="" Bounds="20,997,553,164" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:maxvisibleentries p:Type="Int32">6</p:maxvisibleentries>
             </p:ValueBoxSettings>
@@ -393,13 +394,51 @@
               <Item />
             </p:Value>
           </Pad>
-          <Pad Id="Lie119uW0M5OexX54gYDGy" Comment="Fields" Bounds="10,818,548,46" ShowValueBox="true" isIOBox="true">
+          <Pad Id="Lie119uW0M5OexX54gYDGy" Comment="Fields" Bounds="15,890,548,95" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:horizontal p:Type="Boolean">true</p:horizontal>
               <p:maxvisibleentries p:Type="Int32">20</p:maxvisibleentries>
             </p:ValueBoxSettings>
             <p:Value>
               <Item></Item>
+            </p:Value>
+          </Pad>
+          <Node Bounds="162,632,100,19" Id="ESWiinN9CbtLOsdYc4h5Ia">
+            <p:NodeReference LastCategoryFullName="VL.MySQL.Commands" LastSymbolSource="VL.MySQL.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FetchResultRows" />
+            </p:NodeReference>
+            <Pin Id="PRkoBuVZV1YNQub550wHm8" Name="Update" Kind="InputPin" />
+            <Pin Id="At6gzYqgWrmQQvpHEQZ2fI" Name="Results" Kind="InputPin" />
+            <Pin Id="KJ2jb8zUq28O9Ms9rOHrzb" Name="ColumnName" Kind="OutputPin" />
+            <Pin Id="Lcbs5pYINfrNMmQFEU7KL8" Name="Type" Kind="OutputPin" />
+            <Pin Id="Ukpob0A7MTVMlaikGO90FS" Name="TypeName" Kind="OutputPin" />
+            <Pin Id="BMHVB3P4RlDOSqQX0jWQy3" Name="Value" Kind="OutputPin" />
+          </Node>
+          <Pad Id="OownRnIdDwlPMbWVNMBlBv" Bounds="79,646,54,19" ShowValueBox="true" isIOBox="true" Value="OR USE">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="BBKvq4O2Wf5LxPCmYtSz34" Bounds="-189,642,157,19" ShowValueBox="true" isIOBox="true" Value="Create your custom pack">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="HgpSFYlakEHLmhBlUCJfcF" Comment="" Bounds="259,684,162,185" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">38</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item />
             </p:Value>
           </Pad>
         </Canvas>
@@ -426,9 +465,11 @@
         <Link Id="QGI7orsGzPqNVmBvKyuc94" Ids="PqFNaLHQZmZLGBEAVoVpHV,U4tiU3dgkkQPDzkF39Thet" />
         <Link Id="PO0DrlfRdHZNlC6oxECbLw" Ids="BHv4gneaVX1LuJIO3pvgK9,JRx47aSIILfNx6e89pDWZk" />
         <Link Id="Qr8YNVCSCtoPzOiCLgu0Yz" Ids="LrlyY5yuUajMT1tenpIyWF,Lie119uW0M5OexX54gYDGy" />
+        <Link Id="VnnbPafXyV2Omx5j7jksC3" Ids="PqFNaLHQZmZLGBEAVoVpHV,At6gzYqgWrmQQvpHEQZ2fI" />
+        <Link Id="HEgmZghQ5nlLgKfo9zENvX" Ids="BMHVB3P4RlDOSqQX0jWQy3,HgpSFYlakEHLmhBlUCJfcF" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="Nb0PczT7AoZOWllsCU2h6T" Location="VL.CoreLib" Version="2021.4.10-1018-g933c4b477f" />
+  <NugetDependency Id="Nb0PczT7AoZOWllsCU2h6T" Location="VL.CoreLib" Version="2021.4.11-1112-g53848a3676" />
   <NugetDependency Id="EpFbtz4lftmMrrzQt02reC" Location="VL.MySQL" Version="0.0.0.0" />
 </Document>

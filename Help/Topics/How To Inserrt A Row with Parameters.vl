@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="LL6PgAH0fvdL5CbMcIsUYu" LanguageVersion="2021.4.10.1018" Version="0.128">
+<Document xmlns:p="property" Id="LL6PgAH0fvdL5CbMcIsUYu" LanguageVersion="2021.4.11.1112" Version="0.128">
   <Patch Id="Cz0RwXYotkCNgNs7YFpMO0">
     <Canvas Id="Q1ZRpiQN6NiQD7KH8JvWjE" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,9 +15,9 @@
       <Patch Id="HJRLezhPG9zMXEGiAdCprK">
         <Canvas Id="Id97ZB5bOPVMCFp1EPi9i9" CanvasType="Group">
           <Node Bounds="904,-301,165,19" Id="EThJpU9wllqOKLLqoHaR4l">
-            <p:NodeReference LastCategoryFullName="VL.MySQL.Connection" LastSymbolSource="VL.MySQL.vl">
+            <p:NodeReference LastCategoryFullName="VL.MySQL" LastSymbolSource="VL.MySQL.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="MySQL" />
+              <Choice Kind="ProcessAppFlag" Name="MySQLConnector" />
             </p:NodeReference>
             <Pin Id="V0cqEnfiyKYNJK7oC2jnoM" Name="Server" Kind="InputPin" />
             <Pin Id="PC01DX8mxbILuZSteZZMsy" Name="User" Kind="InputPin" DefaultValue="root" />
@@ -136,7 +136,7 @@
           <Node Bounds="977,326,93,19" Id="T6EpX3H8Y92MbpC8GeqLHN">
             <p:NodeReference LastCategoryFullName="VL.MySQL.Commands" LastSymbolSource="VL.MySQL.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="InsertParameters (Spectral)" />
+              <Choice Kind="ProcessAppFlag" Name="InsertWithParameters (Spectral)" />
             </p:NodeReference>
             <Pin Id="GraC7BfEy6CL5jOj14Y315" Name="MySQL" Kind="InputPin" />
             <Pin Id="RlJTUKJ7yndPaiFjZUvdyV" Name="TableName" Kind="InputPin" DefaultValue="black_ops" />
@@ -277,6 +277,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="DuXk8CNgUSTP6acpr7JMqe" Location="VL.CoreLib" Version="2021.4.10-1018-g933c4b477f" />
+  <NugetDependency Id="DuXk8CNgUSTP6acpr7JMqe" Location="VL.CoreLib" Version="2021.4.11-1112-g53848a3676" />
   <NugetDependency Id="FHZ9XDgkG3gPCD8UPaa5jn" Location="VL.MySQL" Version="0.0.0.0" />
 </Document>

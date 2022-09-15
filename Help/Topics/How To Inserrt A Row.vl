@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="AHacxuCQjKzOiLhyFDP3Dr" LanguageVersion="2021.4.10.1018" Version="0.128">
+<Document xmlns:p="property" Id="AHacxuCQjKzOiLhyFDP3Dr" LanguageVersion="2021.4.11.1112" Version="0.128">
   <Patch Id="RhtwFx6IgiHPwghcfOQBaJ">
     <Canvas Id="CneYNhMNAkWK9mbC5DSSyh" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -43,9 +43,9 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="-16,101,105,19" Id="SFeOAq7xNyLMMIurz1o9Li">
-            <p:NodeReference LastCategoryFullName="VL.MySQL.Connection" LastSymbolSource="VL.MySQL.vl">
+            <p:NodeReference LastCategoryFullName="VL.MySQL" LastSymbolSource="VL.MySQL.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="MySQL" />
+              <Choice Kind="ProcessAppFlag" Name="MySQLConnector" />
             </p:NodeReference>
             <Pin Id="FTLI2MMDdM9LhCgTImVysS" Name="Server" Kind="InputPin" DefaultValue="127.0.0.1" />
             <Pin Id="D1vIwoxo40HOdx0fJPGIsA" Name="Port" Kind="InputPin" />
@@ -104,13 +104,10 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="-13,334,105,19" Id="FIHvr63RLqKP6Q9x9dh2jj">
-            <p:NodeReference LastCategoryFullName="VL.MySQL" LastSymbolSource="VL.MySQL.vl">
+            <p:NodeReference LastCategoryFullName="VL.MySQL.Commands" LastSymbolSource="VL.MySQL.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="MySQL" />
               <Choice Kind="ProcessAppFlag" Name="Insert" />
-              <CategoryReference Kind="Category" Name="MySQL" NeedsToBeDirectParent="true">
-                <p:OuterCategoryReference Kind="Category" Name="VL" NeedsToBeDirectParent="true" />
-              </CategoryReference>
             </p:NodeReference>
             <Pin Id="N8PrLgHqQ4cOMuBVa3ClGO" Name="MySQL" Kind="InputPin" />
             <Pin Id="T38XhnjAHM4OFYF0nbSMFI" Name="TableName" Kind="InputPin" />
@@ -191,6 +188,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="Nb0PczT7AoZOWllsCU2h6T" Location="VL.CoreLib" Version="2021.4.10-1018-g933c4b477f" />
+  <NugetDependency Id="Nb0PczT7AoZOWllsCU2h6T" Location="VL.CoreLib" Version="2021.4.11-1112-g53848a3676" />
   <NugetDependency Id="EpFbtz4lftmMrrzQt02reC" Location="VL.MySQL" Version="0.0.0.0" />
 </Document>
