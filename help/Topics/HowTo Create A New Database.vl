@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="OjmrxP3syjXOGS4MWJCE1I" LanguageVersion="2021.4.11.1152" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="OjmrxP3syjXOGS4MWJCE1I" LanguageVersion="2023.5.3-0210-g711a1c31d4" Version="0.128">
   <Patch Id="FQZcIosnjdxMLFae3JW1Lh">
     <Canvas Id="J3MgWAcmJpkLeVu0b4xK05" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,11 +15,13 @@
       <Patch Id="LlAkkGhUrMALd633rcbTFo">
         <Canvas Id="PFa837im7dJOzpcIaUdymh" CanvasType="Group">
           <Node Bounds="381,292,165,19" Id="Dt3FNh4Qbh4PszRleyhvV8">
-            <p:NodeReference LastCategoryFullName="VL.MySQL" LastSymbolSource="VL.MySQL.vl">
+            <p:NodeReference LastCategoryFullName="VL.MySQL" LastDependency="VL.MySQL.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="MySQLConnector" />
             </p:NodeReference>
+            <Pin Id="AarXHt4fW84NC8zduP0h6G" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="OQU2KKUH8Y4N0xki0UjsXI" Name="Server" Kind="InputPin" />
+            <Pin Id="UMfRkHhJ9H8QB3VlRVLoLx" Name="Port" Kind="InputPin" IsHidden="true" />
             <Pin Id="QnpFVofZUhZLkGRWFVK1kD" Name="User" Kind="InputPin" />
             <Pin Id="V3TchEat3evOGc5I9erR8F" Name="Password" Kind="InputPin" DefaultValue="" />
             <Pin Id="JV7wNHxNP5yOwEweEJd9tg" Name="Database" Kind="InputPin" DefaultValue="" />
@@ -29,26 +31,29 @@
             <Pin Id="KJhN0o9UTyxQCTLIYmrlIY" Name="Close" Kind="InputPin" />
             <Pin Id="QX8Vqjns6TVM9I31UqyVNW" Name="ClearPool" Kind="InputPin" />
             <Pin Id="DstTiJ6beySMYU4EnLtDKT" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="GZS8OgNETDSOjaZrtdS6Pf" Name="connection" Kind="OutputPin" IsHidden="true" />
             <Pin Id="CsnFA5KoZ2IM81D0q3AtWb" Name="State" Kind="OutputPin" />
           </Node>
           <Node Bounds="386,483,97,19" Id="GLPnw4GXPcWNhqJWqivRAF">
-            <p:NodeReference LastCategoryFullName="VL.MySQL.Commands" LastSymbolSource="VL.MySQL.vl">
+            <p:NodeReference LastCategoryFullName="VL.MySQL.Commands" LastDependency="VL.MySQL.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ExecuteNonQuery" />
             </p:NodeReference>
+            <Pin Id="IHDAbjBRHJUMIbGY0cTp4a" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="C3f1opZMfucOPibuhKZU3Z" Name="MySQL" Kind="InputPin" />
             <Pin Id="UPVAzxeReohLbggW3CbYem" Name="Command Text" Kind="InputPin" />
             <Pin Id="K5X9gPuhIC5MaX9aXPvMQT" Name="Execute" Kind="InputPin" />
-            <Pin Id="ETKRFsbb6qfPX8Lru9VguX" Name="Cancel" Kind="InputPin" />
-            <Pin Id="L4AP7bXotbBOjmFiJLScdg" Name="Result" Kind="OutputPin" />
+            <Pin Id="Ojus7uAX8AVMHUfWQ1iziu" Name="Canceled" Kind="InputPin" />
+            <Pin Id="PkAsTuZHVrqLTDhiqs0s4B" Name="Is Completed" Kind="OutputPin" />
+            <Pin Id="IjdQKsU0HCKPLZAHW37Ol7" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="RRoKdlyiISjNdMpGsA64Nm" Comment="CREATE DB" Bounds="418,432,154,15" ShowValueBox="true" isIOBox="true" Value="CREATE DATABASE test_vvvv">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="Ud5qGMCx1gdMKsh7djOwzE" Comment="Execute" Bounds="724,445,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
             </p:TypeAnnotation>
@@ -56,20 +61,9 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="386,528,65,19" Id="QxilOUc3yIIM512DzaI1z3">
-            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
-            </p:NodeReference>
-            <Pin Id="JiuZxEo1hbnQFAHvi7EPrK" Name="Async Notifications" Kind="InputPin" />
-            <Pin Id="L4EG1ch44aPN6z0Ykz9XIk" Name="Reset" Kind="InputPin" />
-            <Pin Id="O3sJQJM7legMnmss56OA7b" Name="Value" Kind="OutputPin" />
-            <Pin Id="SoB7J71MqmUQVj1inriQbR" Name="On Data" Kind="OutputPin" />
-          </Node>
-          <Pad Id="EBfieg59xFePKFT7fRLhEr" Comment="" Bounds="387,597,35,15" ShowValueBox="true" isIOBox="true" />
           <Pad Id="V5wa09vQUZTOdzNyG1Qbt3" Comment="State" Bounds="543,346,80,15" ShowValueBox="true" isIOBox="true" />
           <Pad Id="Mz60fCh4JFbMqBSUXYsjfq" Comment="Open" Bounds="507,49,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
             </p:TypeAnnotation>
@@ -78,12 +72,12 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="QEKbTM7qQcdL0IcFOhmPg9" Comment="Database" Bounds="442,196,35,15" ShowValueBox="true" isIOBox="true" Value="">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="QGMKJ1LurTkMEd39LNkWV3" Bounds="446,219,507,47" ShowValueBox="true" isIOBox="true" Value="You don't need to fill this in case you want to execute a nonQuery command, such as in the current example CREATE DATABASE [yourdatabasename]">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -92,12 +86,12 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="A2i9ikoTaKGLp79A5pLD1C" Comment="User" Bounds="401,-23,35,15" ShowValueBox="true" isIOBox="true" Value="">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="Ctu2zBx7CiqOJxOcuD6M0v" Bounds="471,-27,124,19" ShowValueBox="true" isIOBox="true" Value="1. Set your user name">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -106,12 +100,12 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="OvejJtezObYL4VGYXNRc8J" Comment="Password" Bounds="424,16,35,15" ShowValueBox="true" isIOBox="true" Value="">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="G112JedyY2bMZOz2DyjQ1F" Bounds="520,13,119,19" ShowValueBox="true" isIOBox="true" Value="2. Set your password">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -120,16 +114,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="Fvd4McU3d9HNoowG8FGoK3" Bounds="584,47,254,20" ShowValueBox="true" isIOBox="true" Value="3. Open new connection (Connect)">
-            <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="RyixYoMUWiPO6yHkykPQEI" Bounds="433,594,267,19" ShowValueBox="true" isIOBox="true" Value="In case of success result must be equal to 1">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -138,7 +123,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="DWD4xeNIYohPO6uTCrRe3h" Bounds="410,386,289,39" ShowValueBox="true" isIOBox="true" Value="4. Replace test_vvvv with the desired DB name you want to create">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -147,7 +132,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="N8QkyRO8z6RNHJtKsUstE8" Bounds="813,440,289,39" ShowValueBox="true" isIOBox="true" Value="5. Execute Command">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -156,13 +141,12 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="IpaC30ZBRJKLvu2WpI9XBy" Comment="DROP DB" Bounds="62,440,154,15" ShowValueBox="true" isIOBox="true" Value="DROP DATABASE test_vvvv">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="HW0u5TJFLDZNpGphsDOosC" Comment="On Data" Bounds="448,669,35,35" ShowValueBox="true" isIOBox="true" />
           <Pad Id="Kf04cCv1R9vPElJGMWeqnP" Bounds="53,385,227,50" ShowValueBox="true" isIOBox="true" Value="*You may delete a DB by using the DROP command">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -170,6 +154,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Pad Id="B93oFjoIn8FMUKWSu0Spqp" Comment="Is Completed" Bounds="387,541,35,35" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="UFltmD2VmaSO3zpImd4k0V" Name="Create" />
         <Patch Id="HppizFnUU1sOLBNlUb2xxr" Name="Update" />
@@ -179,18 +164,16 @@
         </ProcessDefinition>
         <Link Id="Hs4bYzjx0n8LBwDoAaLQFy" Ids="DstTiJ6beySMYU4EnLtDKT,C3f1opZMfucOPibuhKZU3Z" />
         <Link Id="Se8KBfC5HvNPzYO5ZhBqMo" Ids="Ud5qGMCx1gdMKsh7djOwzE,K5X9gPuhIC5MaX9aXPvMQT" />
-        <Link Id="O7SymJCs6FEMRd9XBZvO5u" Ids="L4AP7bXotbBOjmFiJLScdg,JiuZxEo1hbnQFAHvi7EPrK" />
-        <Link Id="KXDWqUcsCccLBqTT5PJOI8" Ids="O3sJQJM7legMnmss56OA7b,EBfieg59xFePKFT7fRLhEr" />
         <Link Id="BGBVbZfHWlgNtltiPrDToh" Ids="CsnFA5KoZ2IM81D0q3AtWb,V5wa09vQUZTOdzNyG1Qbt3" />
         <Link Id="CKDuDSmEZlmPBbXcwIR8tc" Ids="Mz60fCh4JFbMqBSUXYsjfq,IgemVbDFdcpMr90WapJnLr" />
         <Link Id="OKeSTXafPzlLTzG7ke3DWS" Ids="QEKbTM7qQcdL0IcFOhmPg9,JV7wNHxNP5yOwEweEJd9tg" />
         <Link Id="FkizGyWGfQBPpwjHZWzed4" Ids="A2i9ikoTaKGLp79A5pLD1C,QnpFVofZUhZLkGRWFVK1kD" />
         <Link Id="TaYmoijTvNILt0JklXm1X7" Ids="OvejJtezObYL4VGYXNRc8J,V3TchEat3evOGc5I9erR8F" />
-        <Link Id="PkwDhlpnQvvNYqCyRDaWbp" Ids="SoB7J71MqmUQVj1inriQbR,HW0u5TJFLDZNpGphsDOosC" />
         <Link Id="HXMLs0AuRanO73JS9owLk5" Ids="RRoKdlyiISjNdMpGsA64Nm,UPVAzxeReohLbggW3CbYem" />
+        <Link Id="PvLRbZ1r0mzLyanWK5yxqA" Ids="PkAsTuZHVrqLTDhiqs0s4B,B93oFjoIn8FMUKWSu0Spqp" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="MvBG26HWr4ENQ7HPHUEG4i" Location="VL.CoreLib" Version="2021.4.11-1152-g29d61bbe61" />
+  <NugetDependency Id="MvBG26HWr4ENQ7HPHUEG4i" Location="VL.CoreLib" Version="2023.5.3-0210-g711a1c31d4" />
   <NugetDependency Id="CcusbbxpGhHMoxdYzLmMrs" Location="VL.MySQL" Version="0.0.0.0" />
 </Document>
