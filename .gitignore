@@ -1,7 +1,9 @@
 /.vl
+/.vs
 /Help/Overview/.vl
 /Help/Topics/.vl
 
 /csharp/VL.MySQL/.vs
 /csharp/VL.MySQL/bin
 /csharp/VL.MySQL/obj
+/csharp/.vs

@@ -72,9 +72,15 @@ namespace VL.MySQL
         }
 
 
-        public async void CreatTable()
+        public async void CreatTable(Table table)
         {
-            
+
+            foreach (var col in table.GetColumns()) 
+            { 
+                
+                
+            }
+            await using var command = new MySqlCommand($"CREATE TABLE {table.Name}", connection);
         }
 
         public async Task<int> NonQuery(string textCommand)
@@ -88,6 +94,8 @@ namespace VL.MySQL
             await using var command = new MySqlCommand(textCommand, connection);
             return await command.ExecuteScalarAsync();
         }
+
+        
 
         public string State() => connection.State.ToString();
     }
