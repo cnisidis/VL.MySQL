@@ -72,15 +72,46 @@ namespace VL.MySQL
         }
 
 
-        public async void CreatTable(Table table)
+        public async Task<int> CreateTable(TableSchema table)
         {
 
-            foreach (var col in table.GetColumns()) 
-            { 
-                
-                
+            StringBuilder sqlBuilder = new StringBuilder();
+            sqlBuilder.Append($"CREATE TABLE IF NOT EXISTS `{table.Name}` (\n");
+
+            List<string> columnDefinitions = new List<string>();
+
+            foreach (DataColumn col in table.Table.Columns) 
+            {
+                string columnName = $"`{col.ColumnName}`";
+                string dataType = Utils.GetMySqlDataType(col.DataType);
+                string nullable = col.AllowDBNull ? "NULL" : "NOT NULL";
+
+                if (col.AutoIncrement)
+                {
+                    dataType += " AUTO_INCREMENT";
+                }
+                columnDefinitions.Add($" {columnName} {dataType} {nullable}");
             }
-            await using var command = new MySqlCommand($"CREATE TABLE {table.Name}", connection);
+
+            // 2. Add Primary Key constraint
+            DataColumn[] primaryKeys = table.Table.PrimaryKey;
+            if (primaryKeys.Length > 0)
+            {
+                string pkColumns = string.Join(", ", primaryKeys.Select(pk => $"`{pk.ColumnName}`"));
+                columnDefinitions.Add($"  PRIMARY KEY ({pkColumns})");
+            }
+            sqlBuilder.Append(string.Join(",\n", columnDefinitions));
+            sqlBuilder.Append("\n)");
+            string commandText = sqlBuilder.ToString();
+            await using var command = new MySqlCommand(commandText, connection);
+            return await command.ExecuteNonQueryAsync();
+        }
+
+        
+        public async Task<int> DropTable(string TableName)
+        {
+            await using var command = new MySqlCommand($"DROP TABLE IF EXISTS {TableName}", connection);
+            return await command.ExecuteNonQueryAsync();
         }
 
         public async Task<int> NonQuery(string textCommand)
