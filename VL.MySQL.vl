@@ -2,7 +2,7 @@
 <Document xmlns:p="property" xmlns:r="reflection" Id="BDfHgg8fgrPNqf280rRB7t" LanguageVersion="2025.7.0" Version="0.128">
   <Patch Id="DZllxQneF9yMdOHyJTbszB">
     <Canvas Id="LlQmL1b1fO6MUy6mTcs01s" DefaultCategory="VL.MySQL" CanvasType="FullCategory">
-      <Canvas Id="IgHHrRfDHZqPwLDkrZ6ouF" Name="Forwarded" Position="625,196">
+      <Canvas Id="IgHHrRfDHZqPwLDkrZ6ouF" Name="Forwarded" Position="315,146">
         <!--
 
     ************************ IDataRecord ************************
@@ -40,7 +40,7 @@
           </Patch>
         </Node>
       </Canvas>
-      <Canvas Id="KgJFIRBZPSCLNJqrlif4kT" Name="Parametrization" Position="368,254">
+      <Canvas Id="KgJFIRBZPSCLNJqrlif4kT" Name="Parametrization" Position="315,184">
         <!--
 
     ************************ MySQLParameter ************************
@@ -1180,7 +1180,7 @@
           </Patch>
         </Node>
       </Canvas>
-      <Canvas Id="EQd72cA2cc6L5Q00PoBVVx" Name="XML" Position="776,200" DefaultCategory="VL.MySQL.XML" CanvasType="FullCategory">
+      <Canvas Id="EQd72cA2cc6L5Q00PoBVVx" Name="XML" Position="315,220" DefaultCategory="VL.MySQL.XML" CanvasType="FullCategory">
         <!--
 
     ************************ ToXMLDataDocument ************************
@@ -2064,11 +2064,6 @@
                   <Pin Id="RzYqdGIZdbMMeXNg8iXNFD" Name="Table" Kind="InputPin" />
                   <Pin Id="O2YVzuaHHZ8LnHakRSHJhb" Name="Execute" Kind="InputPin" />
                 </Patch>
-                <!--
-
-    ************************  ************************
-
--->
                 <ProcessDefinition Id="PPyXwstPafIMyhX9e7TBvd">
                   <Fragment Id="EEOx3gXl0xXLOIN3Bk19BN" Patch="L9iiWMykG2eOWiXdJb1lgv" Enabled="true" />
                   <Fragment Id="A2w3vSqdjUpPzwwvc0K26L" Patch="LkqCBsH7rufLP9WI5Goql1" Enabled="true" />
@@ -2145,7 +2140,7 @@
           <Link Id="DOPi1KzvgIfPnxoykY5DIJ" Ids="LVRwwiim2HQLjfS11QJ4Tc,GpGEaClmIcFPmRWHqeUH6F" />
         </Patch>
       </Node>
-      <Canvas Id="TgaKxwnPR0sPqvVwIAhO3i" Name="DataSets" Position="369,-30">
+      <Canvas Id="TgaKxwnPR0sPqvVwIAhO3i" Name="DataSets" Position="315,110">
         <!--
 
     ************************ Database ************************
@@ -3004,11 +2999,6 @@
               <Pin Id="SdSAmOUIQJVLTKonQsD3g3" Name="Allow DBNull" Kind="InputPin" />
               <Pin Id="U516aXR6eQVMexkUDAYHUz" Name="Primary Key" Kind="InputPin" Visibility="Optional" />
             </Patch>
-            <!--
-
-    ************************  ************************
-
--->
             <ProcessDefinition Id="FQbOYG2bJ3HLrS5npWaVo7">
               <Fragment Id="G6wqBWUQFMENDcIeOB87of" Patch="OXKiNVqnQQiLEYhNJsT0ex" Enabled="true" />
               <Fragment Id="UeKbfckp8XKPR7okEDHZGa" Patch="HIap7QIZ1KWLkggVkyqFNQ" Enabled="true" />
@@ -3074,5 +3064,5 @@
   <PlatformDependency Id="O503IpXV5qQOBZcTOosqPe" Location="System.Data" />
   <PlatformDependency Id="GuheRqgSGkNPAc4gykOPoT" Location="System.Data.Common" />
   <NugetDependency Id="Rv2Xp5HuotcPQpRII8b1ir" Location="VL.MySQL" Version="0.0.0" />
-  <ProjectDependency Id="VY3tFAyEAvpNGMTSGbx3Dz" Location="./csharp/VL.MySQL/VL.MySQL.csproj" />
+  <ProjectDependency Id="MsZfxMMikb6MtX5D76om2S" Location="./src/VL.MySQL/VL.MySQL.csproj" />
 </Document>
