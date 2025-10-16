@@ -2520,8 +2520,7 @@
                   </Node>
                 </Canvas>
                 <Patch Id="RCFp2ggbExqMJEvzbqZpjj" Name="Create" />
-                <Patch Id="PBahfmFY17hOBmDYEWhnqT" Name="Update">
-                  <Pin Id="Bbg7dqbLHR9LM66JA0XIOX" Name="Execute" Kind="InputPin" />
+                <Patch Id="PBahfmFY17hOBmDYEWhnqT" Name="Update" ManuallySortedPins="true">
                   <Pin Id="JDQFUZGWua4O7qVkhSeymB" Name="Connection" Kind="InputPin" />
                   <Pin Id="PUtU6OPHDDQLajCvMxRXUg" Name="Text Command" Kind="InputPin" />
                   <Pin Id="IZpJqwK7Di4MjZT4bxE30K" Name="Parameters" Kind="InputPin">
@@ -2541,6 +2540,7 @@
                   </Pin>
                   <Pin Id="H8e48UPVaAbLYDOQiRgere" Name="On Finished" Kind="OutputPin" />
                   <Pin Id="TktUMJzffLLQH5mU6FR1aQ" Name="Command" Kind="OutputPin" />
+                  <Pin Id="Bbg7dqbLHR9LM66JA0XIOX" Name="Execute" Kind="InputPin" />
                 </Patch>
                 <!--
 
