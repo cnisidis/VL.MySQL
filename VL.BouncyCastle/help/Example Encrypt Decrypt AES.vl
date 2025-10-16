@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="C10pVdd6OMINH8tpQX3jzF" LanguageVersion="2025.7.0" Version="0.128">
+  <NugetDependency Id="K4iwMzO5auJO2jDINq78LY" Location="VL.CoreLib" Version="2025.7.0" />
+  <Patch Id="GqHGZrOPvd7QINc5d5zOzV">
+    <Canvas Id="AJbtZGfV2dpMMQYwSnzD8Q" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="K0T1k5etDSGQHVw8rnXChr">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="QrOfpdsmkEXL074841yqSq">
+        <Canvas Id="AbWSA97eZLdQFeCZnLY1AQ" CanvasType="Group">
+          <Node Bounds="482,328,78,19" Id="Iu3rviD2nuHM9oKclExnKd">
+            <p:NodeReference LastCategoryFullName="Main" LastDependency="VL.BouncyCastle.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="KeyGenerator" />
+            </p:NodeReference>
+            <Pin Id="Gw6Yqaeu7bhLRwR4cgMX4u" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LunpAZv7b3ONw8daJRkfBJ" Name="Generate" Kind="InputPin" />
+            <Pin Id="IuDXpEdKNBXN8nJSWehB2w" Name="Length" Kind="InputPin" />
+            <Pin Id="UzlOupQG7hvLlMtdlSBWI6" Name="KeyString" Kind="OutputPin" />
+            <Pin Id="HVgC9Ry4Zq4NhRKUstTjsp" Name="KeyBytes" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="598,536,81,19" Id="CO5iWOHlBJJMvvucaHvWQi">
+            <p:NodeReference LastCategoryFullName="Main" LastDependency="VL.BouncyCastle.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Encrypt (AES)" />
+            </p:NodeReference>
+            <Pin Id="RqkXPomMwmOPEDV9GKXiI2" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KWHjbd8waEOOTvicjUbCMZ" Name="Key Length" Kind="InputPin" />
+            <Pin Id="LTktK5Q6QtVPQ0aLTmJM3n" Name="Input Text" Kind="InputPin" />
+            <Pin Id="LS6hblFlFOHMA74PUpqozE" Name="Key " Kind="InputPin" />
+            <Pin Id="FjfLzvaSfmgMZB7CqhawIH" Name="EncryptedText" Kind="OutputPin" />
+            <Pin Id="JR5liuLXRgMPQTokXGC7bK" Name="Encrypt" Kind="InputPin" />
+          </Node>
+          <Pad Id="H53EBvFiBXRNIwcwIf6hKb" Comment="Generate" Bounds="485,260,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="512,628,134,19" Id="CLuavOdLmuSLJmVcjnrVBR">
+            <p:NodeReference LastCategoryFullName="Main" LastDependency="VL.BouncyCastle.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Decrypt (AES)" />
+            </p:NodeReference>
+            <Pin Id="UjAap03Eym2MgSK9LtyojT" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RZGZz4LPrlmOzYk27rLDCi" Name="Key Length" Kind="InputPin" />
+            <Pin Id="N4uVnUgyzqgLrXkvOdcRcm" Name="Key" Kind="InputPin" />
+            <Pin Id="FLM1n5alvYfQXXjp3iWgNj" Name="Decrypted Text" Kind="OutputPin" />
+            <Pin Id="DqsNDC23Ie7MN9ikbIe3nN" Name="EncryptedText" Kind="InputPin" />
+            <Pin Id="HuqGdeiMdGcOgIt5LnGHii" Name="Decrypt" Kind="InputPin" />
+          </Node>
+          <Pad Id="GEWITxEPoFMQLUEXGtu7mV" Comment="Decrypt" Bounds="643,588,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="I980rmQoGF9QGqyURbOdrb" Comment="KeyString" Bounds="484,364,260,15" ShowValueBox="true" isIOBox="true" />
+          <ControlPoint Id="IUoVzv2ZZpFNpObTpEVhEA" Bounds="651,420" />
+          <Pad Id="J6J246PuAtcLhWCfW6fU2C" Comment="Decrypted Text" Bounds="514,678,82,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="AaXlki09q6DQEEaOtZuifx" Comment="Input Text" Bounds="625,478,101,19" ShowValueBox="true" isIOBox="true" Value="Hello vvvv">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="FEjrHpN9CZwOgbHnkM5SlW" Name="Create" />
+        <Patch Id="VPusB8iFH7mN2ZMOL2Dj7M" Name="Update" />
+        <ProcessDefinition Id="K6PptavbTBqOBcem3G8AIm">
+          <Fragment Id="HcTcZ4qKO78PrYJqpAnhH3" Patch="FEjrHpN9CZwOgbHnkM5SlW" Enabled="true" />
+          <Fragment Id="F98kz5jU6yPPnXMVLdWijx" Patch="VPusB8iFH7mN2ZMOL2Dj7M" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="TEtMB0dgs5yOfybuZtrGVs" Ids="H53EBvFiBXRNIwcwIf6hKb,LunpAZv7b3ONw8daJRkfBJ" />
+        <Link Id="PTvhXBDA8MhNOOHZkJYEuZ" Ids="HVgC9Ry4Zq4NhRKUstTjsp,IUoVzv2ZZpFNpObTpEVhEA,LS6hblFlFOHMA74PUpqozE" />
+        <Link Id="SYfNC8wnMPzOpwo84ZEisW" Ids="HVgC9Ry4Zq4NhRKUstTjsp,N4uVnUgyzqgLrXkvOdcRcm" />
+        <Link Id="SLgUuDRWlJBMBDfGQAaU7r" Ids="GEWITxEPoFMQLUEXGtu7mV,HuqGdeiMdGcOgIt5LnGHii" />
+        <Link Id="OY3UdaUrH2vOhS7hZgkS9m" Ids="UzlOupQG7hvLlMtdlSBWI6,I980rmQoGF9QGqyURbOdrb" />
+        <Link Id="PgyeEANfuf4P8TEldqX9Zq" Ids="FjfLzvaSfmgMZB7CqhawIH,DqsNDC23Ie7MN9ikbIe3nN" />
+        <Link Id="HXG6K0ocj2CPNoFAKrE1u7" Ids="FLM1n5alvYfQXXjp3iWgNj,J6J246PuAtcLhWCfW6fU2C" />
+        <Link Id="N0VpNi6hFVNNKQ6wFMrw05" Ids="AaXlki09q6DQEEaOtZuifx,LTktK5Q6QtVPQ0aLTmJM3n" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="VZ4lQynhTmgPE7BUgTZScH" Location="VL.BouncyCastle" Version="0.0.0" />
+</Document>

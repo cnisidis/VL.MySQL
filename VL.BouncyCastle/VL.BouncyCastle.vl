@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="VO9UGjNvoqJOa7HVVoF0Cm" LanguageVersion="2021.4.8.940" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="VO9UGjNvoqJOa7HVVoF0Cm" LanguageVersion="2025.7.0" Version="0.128">
   <Patch Id="P4BxMWqiLkPMV6d1Z91YWC">
     <Canvas Id="B1L2IPJstFTL0cRNzUtVal" DefaultCategory="VL.BouncyCastle" CanvasType="FullCategory">
       <!--
@@ -8,13 +8,13 @@
 
 -->
       <Node Name="KeyGenerator" Bounds="539,401" Id="D7KZ6ltRXBJPMDRaUrvmSy">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="RaSqSSiYZNaOeGdkrtg36Q">
           <Canvas Id="N8pkcwau52hLYg38Qtlv5z" CanvasType="Group">
-            <Node Bounds="625,494,211,218" Id="JmC42T5VLdMOwkGfhPawz2">
-              <p:NodeReference>
+            <Node Bounds="625,485,206,231" Id="JmC42T5VLdMOwkGfhPawz2">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
@@ -25,15 +25,15 @@
                 <Patch Id="MBBCulEBcHOMcUgGjCFISf" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="MsT3r4UwhsYLZbs9uKzUIz" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="637,519,69,26" Id="PNzw6k77gQKNU4f45sC6Y1">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.SecureRandom" LastSymbolSource="BouncyCastle.Crypto.dll">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.SecureRandom" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="SecureRandom" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                   </p:NodeReference>
                   <Pin Id="JoOV2wsv3t9PV4Uq8hbnUm" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="639,591,78,26" Id="BHR0kJJE2I0PE9GygT5fJY">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.SecureRandom" LastSymbolSource="BouncyCastle.Crypto.dll">
+                <Node Bounds="637,560,78,26" Id="BHR0kJJE2I0PE9GygT5fJY">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.SecureRandom" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="GenerateSeed" />
                     <CategoryReference Kind="AssemblyCategory" Name="SecureRandom" NeedsToBeDirectParent="true" />
@@ -43,8 +43,8 @@
                   <Pin Id="KSlF9ZKXK4GPfAZUcTC1ys" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="TMYEg8oh0axMroGCsGyPbI" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="709,672,63,19" Id="HvDYMc89tNaPLtcpSrlWPU">
-                  <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="710,630,63,19" Id="HvDYMc89tNaPLtcpSrlWPU">
+                  <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="CoreLibBasics.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="FromBytes (Base64)" />
                   </p:NodeReference>
@@ -52,20 +52,15 @@
                   <Pin Id="Hw82IlDKV8uLM0XtE5GK1I" Name="Result" Kind="OutputPin" />
                 </Node>
               </Patch>
-              <ControlPoint Id="IvNlPDxHlpSMNQ9ZXbLssH" Bounds="817,696" Name="iv" Alignment="Bottom" />
-              <ControlPoint Id="R5Jpb8xrrM1QJjKqRhj7Rf" Bounds="722,500" Alignment="Top" />
-              <ControlPoint Id="GnyTntQ4q0oLHZ1a682sjc" Bounds="711,696" Alignment="Bottom" />
+              <ControlPoint Id="IvNlPDxHlpSMNQ9ZXbLssH" Bounds="812,710" Name="iv" Alignment="Bottom" />
+              <ControlPoint Id="R5Jpb8xrrM1QJjKqRhj7Rf" Bounds="712,491" Alignment="Top" />
+              <ControlPoint Id="GnyTntQ4q0oLHZ1a682sjc" Bounds="711,710" Alignment="Bottom" />
             </Node>
-            <ControlPoint Id="LgC7dNO3tusPoBJZM2vXeb" Bounds="718,336" />
-            <ControlPoint Id="BW8YWEcAcdNLFMnmSvwxi4" Bounds="621,334" />
-            <ControlPoint Id="CB2P68PuaooPinNXMY2mfx" Bounds="812,778" />
-            <ControlPoint Id="OZI6xwpvxE2MvW2ucz5IRZ" Bounds="710,782" />
+            <ControlPoint Id="LgC7dNO3tusPoBJZM2vXeb" Bounds="712,410" />
+            <ControlPoint Id="BW8YWEcAcdNLFMnmSvwxi4" Bounds="627,410" />
+            <ControlPoint Id="CB2P68PuaooPinNXMY2mfx" Bounds="812,780" />
+            <ControlPoint Id="OZI6xwpvxE2MvW2ucz5IRZ" Bounds="711,781" />
           </Canvas>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="UPQennrq3l5P3qgYDAnRX0">
             <Fragment Id="Phrwgqv6BF1QVIRRDcHrA3" Patch="G8EO2ugr0pkOqulWvF3MI5" Enabled="true" />
             <Fragment Id="SheqzZxEOzsPWp77odFPpd" Patch="KSIpMQcT6TiN93bzJZPhtO" Enabled="true" />
@@ -86,7 +81,7 @@
           <Patch Id="G8EO2ugr0pkOqulWvF3MI5" Name="Create" />
           <Patch Id="KSIpMQcT6TiN93bzJZPhtO" Name="Update">
             <Pin Id="FrxHiKNW0nmL3VgMHDZO03" Name="Generate" Kind="InputPin" Bounds="574,344" />
-            <Pin Id="OOXCTAbqhwHOqhL7YZ3Y89" Name="Length" Kind="InputPin" Bounds="781,302" DefaultValue="16" />
+            <Pin Id="OOXCTAbqhwHOqhL7YZ3Y89" Name="Length" Kind="InputPin" Bounds="781,302" DefaultValue="24" />
             <Pin Id="KzNXFt2nJonO2AL8DdyL9j" Name="KeyString" Kind="OutputPin" Bounds="709,782" />
             <Pin Id="S9RbtP3qSIONXZqZ1UjHp8" Name="KeyBytes" Kind="OutputPin" Bounds="870,773" />
           </Patch>
@@ -94,17 +89,17 @@
       </Node>
       <!--
 
-    ************************ AESEncryption ************************
+    ************************ Encrypt (AES) ************************
 
 -->
-      <Node Name="AESEncryption" Bounds="622,497" Id="NI53QiUox2vNrOnmz4sxeB">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+      <Node Name="Encrypt (AES)" Bounds="543,447" Id="NI53QiUox2vNrOnmz4sxeB">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="SYkxt81hxUqM0qL1prPPc4">
           <Canvas Id="PIHFu80AghRN49OiYk3zbc" CanvasType="Group">
-            <Node Bounds="700,612,293,363" Id="JLdAMlee0ZfQdqdUIAfOYk">
-              <p:NodeReference>
+            <Node Bounds="700,605,298,550" Id="JLdAMlee0ZfQdqdUIAfOYk">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
@@ -114,8 +109,8 @@
               <Patch Id="SaJT08vuBPbMHgUJQW8wm7" ManuallySortedPins="true">
                 <Patch Id="MEdkbfjZQoJOCdOcSkB0Nk" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="H4SFJ7NYCkVMh7VmvvauIs" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="712,711,62,19" Id="ClGASkIAdmcN97rDRA4nhd">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.CipherUtilities" LastSymbolSource="BouncyCastle.Crypto.dll">
+                <Node Bounds="712,891,62,19" Id="ClGASkIAdmcN97rDRA4nhd">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.CipherUtilities" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="CipherUtilities" />
                     <Choice Kind="OperationCallFlag" Name="GetCipher" />
@@ -124,8 +119,8 @@
                   <Pin Id="IqAFIh8InPsQBRgIKzdhh1" Name="Algorithm" Kind="InputPin" />
                   <Pin Id="Mm8OJGgvbgOMXVk540OtWR" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="712,779,72,26" Id="K6XuNjAQlRzPkwR9de0gXv">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Crypto.IBufferedCipher" LastSymbolSource="BouncyCastle.Crypto.dll">
+                <Node Bounds="712,959,72,26" Id="K6XuNjAQlRzPkwR9de0gXv">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Crypto.IBufferedCipher" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="IBufferedCipher" />
                     <Choice Kind="OperationCallFlag" Name="Init" />
@@ -135,8 +130,8 @@
                   <Pin Id="K7P1ik5Av7sMV7WQH7ifn2" Name="Parameters" Kind="InputPin" />
                   <Pin Id="Jx1MD1nnqBNNGvkmCjU4TC" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="712,845,72,26" Id="TtnECGCnfAfLHQbd2yaNt0">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Crypto.IBufferedCipher" LastSymbolSource="BouncyCastle.Crypto.dll">
+                <Node Bounds="712,1025,72,26" Id="TtnECGCnfAfLHQbd2yaNt0">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Crypto.IBufferedCipher" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="DoFinal" />
                     <CategoryReference Kind="AssemblyCategory" Name="IBufferedCipher" NeedsToBeDirectParent="true" />
@@ -147,8 +142,8 @@
                   <Pin Id="TV9AjxRZOlsMm516YPHd09" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="V45yzpO0QhpNhCTjFOj0lo" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="777,694,108,19" Id="LjfDN5ocXbfNgwl1AmIWgw">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.ParameterUtilities" LastSymbolSource="BouncyCastle.Crypto.dll">
+                <Node Bounds="777,874,108,19" Id="LjfDN5ocXbfNgwl1AmIWgw">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.ParameterUtilities" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="CreateKeyParameter" />
                     <PinReference Kind="InputPin" Name="Algorithm" />
@@ -157,8 +152,8 @@
                   <Pin Id="LSJslIdbx2wOqT0ZQDqlQp" Name="Key Bytes" Kind="InputPin" />
                   <Pin Id="CvMcBw8CfDeQZXteP1S79B" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="917,657,64,26" Id="IpJLqaoxf6CMtI0Q9HIQUD">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastSymbolSource="VL.Collections.vl">
+                <Node Bounds="922,830,64,26" Id="IpJLqaoxf6CMtI0Q9HIQUD">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" />
                     <Choice Kind="OperationCallFlag" Name="Length" />
@@ -168,7 +163,7 @@
                   <Pin Id="HInOxvG5PMpNpoIMH8CQhB" Name="Length" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="778,635,52,19" Id="Iw03fPyArdOPyUln6AM7t1">
-                  <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="CoreLibBasics.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="ToBytes" />
                     <CategoryReference Kind="StringType" Name="String" NeedsToBeDirectParent="true" />
@@ -177,8 +172,8 @@
                   <Pin Id="PWnvAL7P51vPaNXWjPGBPI" Name="Encoding" Kind="InputPin" DefaultValue="UTF32" />
                   <Pin Id="Gp9AuQiO6qJNV82o4RN6VE" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="779,921,63,19" Id="PBKI0kAHrqrP6259HmYmbn">
-                  <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="779,1101,63,19" Id="PBKI0kAHrqrP6259HmYmbn">
+                  <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="CoreLibBasics.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="FromBytes (Base64)" />
                   </p:NodeReference>
@@ -186,36 +181,37 @@
                   <Pin Id="RCYshWABnycOMuEMUvCZRl" Name="Result" Kind="OutputPin" />
                 </Node>
               </Patch>
-              <ControlPoint Id="AlDeLuGPeMFMNrE0daSVcF" Bounds="778,618" Alignment="Top" />
-              <ControlPoint Id="HhWPpYTe1SYM3ZnyRjfDnC" Bounds="782,969" Alignment="Bottom" />
-              <ControlPoint Id="LcUb3nDVOAkNoswO4oC8fl" Bounds="924,618" Alignment="Top" />
+              <ControlPoint Id="AlDeLuGPeMFMNrE0daSVcF" Bounds="780,611" Alignment="Top" />
+              <ControlPoint Id="HhWPpYTe1SYM3ZnyRjfDnC" Bounds="782,1149" Alignment="Bottom" />
+              <ControlPoint Id="LcUb3nDVOAkNoswO4oC8fl" Bounds="924,611" Alignment="Top" />
             </Node>
             <ControlPoint Id="FpAZGO5uP0RNN0HRKxakod" Bounds="701,367" />
             <ControlPoint Id="MVmCAdnayCFOhwxKQClCeU" Bounds="924,330" />
-            <ControlPoint Id="ANez9597AoENedvJEHuryy" Bounds="781,364" />
-            <ControlPoint Id="IZCWWSNUJLHNZrTVKpu4Nr" Bounds="784,1026" />
-            <Pad Id="A3zgKs5GyMzLOP7iJYYYVx" Comment="Encoding" Bounds="828,583,93,15" ShowValueBox="true" isIOBox="true" Value="UTF32">
-              <p:TypeAnnotation LastCategoryFullName="Text" LastSymbolSource="CoreLibBasics.vl">
+            <ControlPoint Id="ANez9597AoENedvJEHuryy" Bounds="780,370" />
+            <ControlPoint Id="IZCWWSNUJLHNZrTVKpu4Nr" Bounds="784,1206" />
+            <Pad Id="A3zgKs5GyMzLOP7iJYYYVx" Comment="Encoding" Bounds="828,583,95,15" ShowValueBox="true" isIOBox="true" Value="UTF32">
+              <p:TypeAnnotation LastCategoryFullName="Text" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Encodings" />
               </p:TypeAnnotation>
             </Pad>
             <Pad Id="UPv3moBOzUDNiO6AW3nTwg" Comment="Algorithm" Bounds="712,527,35,15" ShowValueBox="true" isIOBox="true" Value="AES">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
-            <Node Bounds="1021,344,64,26" Id="GF4ZLaOog6fOgkhHTqhtzV">
-              <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastSymbolSource="VL.Collections.vl">
+            <Node Bounds="1027,360,64,26" Id="GF4ZLaOog6fOgkhHTqhtzV">
+              <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ArrayType" Name="MutableArray" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
               </p:NodeReference>
+              <Pin Id="Ahm0FFaq6vMN0DMZbAKz2T" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="FUOOtp50qGeLG9CvAeiOUp" Name="Length" Kind="InputPin" DefaultValue="16" />
               <Pin Id="VgNffBjbqEoPwCZnHvpope" Name="Result" Kind="StateOutputPin" />
             </Node>
             <Pad Id="OGSJOxlFyOULhw2L1CYLxx" SlotId="HWeYszQ1urnMAPDZvcchpT" Bounds="1029,407" />
-            <Node Bounds="892,462,80,80" Id="UgF96ltjvWiNwbvYFeJq39">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+            <Node Bounds="909,464,137,78" Id="UgF96ltjvWiNwbvYFeJq39">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -225,11 +221,11 @@
                 <Patch Id="AAnVEN8mzdKMPr0VLLtseJ" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="SFl07g3OIvHQWgjymTavMk" Name="Then" ManuallySortedPins="true" />
               </Patch>
-              <ControlPoint Id="MkCjNemEOHbOrIURf7oDhr" Bounds="923,468" Alignment="Top" />
+              <ControlPoint Id="MkCjNemEOHbOrIURf7oDhr" Bounds="1029,470" Alignment="Top" />
               <ControlPoint Id="PidVedtc3ItMnW0qiOKGjd" Bounds="923,536" Alignment="Bottom" />
             </Node>
-            <Node Bounds="833,381,64,26" Id="Fcb2vdiMFuzOLCAzzrAQd6">
-              <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastSymbolSource="VL.Collections.vl">
+            <Node Bounds="850,370,64,26" Id="Fcb2vdiMFuzOLCAzzrAQd6">
+              <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ArrayType" Name="MutableArray" />
                 <Choice Kind="OperationCallFlag" Name="Length" />
@@ -238,8 +234,8 @@
               <Pin Id="CvOJaRr0V5xMvvYXHezhxV" Name="Output" Kind="StateOutputPin" />
               <Pin Id="P5tLJQS7Y5VN0siK3Xiwep" Name="Length" Kind="OutputPin" />
             </Node>
-            <Node Bounds="891,420,25,19" Id="C0UyCGW86IzNaBlV4sgw81">
-              <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+            <Node Bounds="909,420,25,19" Id="C0UyCGW86IzNaBlV4sgw81">
+              <p:NodeReference LastCategoryFullName="Math" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="&gt;" />
               </p:NodeReference>
@@ -247,12 +243,8 @@
               <Pin Id="HdC4jqio5QgLunE0500jkv" Name="Input 2" Kind="InputPin" DefaultValue="0" />
               <Pin Id="AXRZxxVH98RQGZA50AR5Zb" Name="Result" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="DX3OLFJyhr0OGO2oQOEFL3" Bounds="1029,320" />
           </Canvas>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="VrnYbkqRAD6OMYipNboMFL">
             <Fragment Id="KdmV4QKMQmPOsLiAETHJYg" Patch="GxHIQv0P8WdLNrMMW3gR0G" Enabled="true" />
             <Fragment Id="Kd5WjtMm5wYOmz81wP0spX" Patch="UmXqJqwiWUtLMnH6S6oh4Q" Enabled="true" />
@@ -274,12 +266,14 @@
           <Link Id="LLisWWnPp1OL4Q3E8MgYp5" Ids="RCYshWABnycOMuEMUvCZRl,HhWPpYTe1SYM3ZnyRjfDnC" />
           <Link Id="AmypgQL0UJ4PM4nNcnmmYI" Ids="HhWPpYTe1SYM3ZnyRjfDnC,IZCWWSNUJLHNZrTVKpu4Nr" />
           <Link Id="TGcRVN5SCdeM6BUAaSyKh8" Ids="IZCWWSNUJLHNZrTVKpu4Nr,TGCcMm4b0W2N5t7X8j6M4i" IsHidden="true" />
-          <Patch Id="GxHIQv0P8WdLNrMMW3gR0G" Name="Create" ParticipatingElements="GF4ZLaOog6fOgkhHTqhtzV" />
-          <Patch Id="UmXqJqwiWUtLMnH6S6oh4Q" Name="Update">
-            <Pin Id="FnkTwKoBMR7OPJo3gdLyg2" Name="Encrypt" Kind="InputPin" Bounds="586,429" />
-            <Pin Id="VD8HVHn5RnGMyyWEqtCCSJ" Name="Text" Kind="InputPin" Bounds="795,377" />
+          <Patch Id="GxHIQv0P8WdLNrMMW3gR0G" Name="Create" ParticipatingElements="GF4ZLaOog6fOgkhHTqhtzV">
+            <Pin Id="PBYfemoCGSkOXiOH9Bc8ht" Name="Key Length" Kind="InputPin" DefaultValue="24" />
+          </Patch>
+          <Patch Id="UmXqJqwiWUtLMnH6S6oh4Q" Name="Update" ManuallySortedPins="true">
+            <Pin Id="VD8HVHn5RnGMyyWEqtCCSJ" Name="Input Text" Kind="InputPin" Bounds="795,377" />
             <Pin Id="CgmHx1MdHZiLSc19DG3905" Name="Key " Kind="InputPin" Bounds="879,444" />
             <Pin Id="TGCcMm4b0W2N5t7X8j6M4i" Name="EncryptedText" Kind="OutputPin" Bounds="845,1010" />
+            <Pin Id="FnkTwKoBMR7OPJo3gdLyg2" Name="Encrypt" Kind="InputPin" Bounds="586,429" />
           </Patch>
           <Link Id="AlnaUwzzSaVMNqaudIZS9I" Ids="A3zgKs5GyMzLOP7iJYYYVx,PWnvAL7P51vPaNXWjPGBPI" />
           <Slot Id="HWeYszQ1urnMAPDZvcchpT" Name="Key" />
@@ -292,40 +286,42 @@
           <Link Id="PNy36rEvpylQZqIEIOj2BT" Ids="MVmCAdnayCFOhwxKQClCeU,JFJ0NPi75f5MvMJU9XGQRd" />
           <Link Id="IJrMQ3fFfksPK4vwPUbuWy" Ids="P5tLJQS7Y5VN0siK3Xiwep,LyQsApWNgYhPEvAlndKytJ" />
           <Link Id="KO3a7iY49hPLZlE7veQGdy" Ids="AXRZxxVH98RQGZA50AR5Zb,GUJJiNKRtIxMH8OKqBmbYV" />
+          <Link Id="Nyv4ik3oFEFO2WisFis1hL" Ids="DX3OLFJyhr0OGO2oQOEFL3,FUOOtp50qGeLG9CvAeiOUp" />
+          <Link Id="Eg6sJJMQqVpPlM29xDIcTj" Ids="PBYfemoCGSkOXiOH9Bc8ht,DX3OLFJyhr0OGO2oQOEFL3" IsHidden="true" />
         </Patch>
       </Node>
       <!--
 
-    ************************ AESDecryption ************************
+    ************************ Decrypt (AES) ************************
 
 -->
-      <Node Name="AESDecryption" Bounds="622,544" Id="EmrX5XaTyCUPrDB84ZInbT">
-        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+      <Node Name="Decrypt (AES)" Bounds="544,484" Id="EmrX5XaTyCUPrDB84ZInbT">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="NzTwSEp20bVPRe2Dy1nDbD">
           <Canvas Id="Ek9hFRv66fZLuocirWuJQk" CanvasType="Group">
-            <Pad Id="DQWcSylFJoNOGs8qY85O0n" Comment="Algorithm" Bounds="788,642,35,15" ShowValueBox="true" isIOBox="true" Value="AES">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <Pad Id="DQWcSylFJoNOGs8qY85O0n" Comment="Algorithm" Bounds="798,621,35,15" ShowValueBox="true" isIOBox="true" Value="AES">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
-            <Node Bounds="783,698,248,350" Id="C3xExuWj00ZLcCjess9nPm">
-              <p:NodeReference>
+            <Node Bounds="784,704,281,333" Id="C3xExuWj00ZLcCjess9nPm">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
               <Pin Id="OnEPNCVKOroPr2mBUvlrhZ" Name="Force" Kind="InputPin" />
               <Pin Id="NFS9pNnVuGuNhdn1YLpOb3" Name="Dispose Cached Outputs" Kind="InputPin" />
               <Pin Id="N7JrqjFam4HQag6B2GABAz" Name="Has Changed" Kind="OutputPin" />
-              <ControlPoint Id="OWQPm4oE2U7QTxXjRInCxI" Bounds="869,1036" Alignment="Bottom" />
-              <ControlPoint Id="S1HEE8KDXUIMTFolLhfUR3" Bounds="956,704" Alignment="Top" />
-              <ControlPoint Id="ENSplKgYN7NPLKXZobyyIt" Bounds="865,704" Alignment="Top" />
+              <ControlPoint Id="OWQPm4oE2U7QTxXjRInCxI" Bounds="865,1031" Alignment="Bottom" />
+              <ControlPoint Id="S1HEE8KDXUIMTFolLhfUR3" Bounds="956,710" Alignment="Top" />
+              <ControlPoint Id="ENSplKgYN7NPLKXZobyyIt" Bounds="860,710" Alignment="Top" />
               <Patch Id="DmFtLB9fHA7M2IYR4DidBd" ManuallySortedPins="true">
                 <Patch Id="VpXiT5imZeIQJ8XxFuKdrH" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="Vr9FpvRw71TMVUD1COqM3B" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="796,813,62,19" Id="NNIVnFzyjapPn3YpKThddB">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.CipherUtilities" LastSymbolSource="BouncyCastle.Crypto.dll">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.CipherUtilities" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="CipherUtilities" />
                     <Choice Kind="OperationCallFlag" Name="GetCipher" />
@@ -334,8 +330,8 @@
                   <Pin Id="K9c9cRgsBRsQMEzxRsusw0" Name="Algorithm" Kind="InputPin" />
                   <Pin Id="FjdfbNbWqpOOzBCKwUJDNs" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="795,881" Id="QdZCuCVeOKKNUtAznt0lG1">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Crypto.IBufferedCipher" LastSymbolSource="BouncyCastle.Crypto.dll">
+                <Node Bounds="796,870,72,26" Id="QdZCuCVeOKKNUtAznt0lG1">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Crypto.IBufferedCipher" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="IBufferedCipher" />
                     <Choice Kind="OperationCallFlag" Name="Init" />
@@ -345,8 +341,8 @@
                   <Pin Id="JxcGlr2rA3VOSROD68iDJ6" Name="Parameters" Kind="InputPin" />
                   <Pin Id="IcdwRYvlHhjPjaQQYonwg5" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="797,949,72,26" Id="CwnSjGRL4XdLYojlrv1Un7">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Crypto.IBufferedCipher" LastSymbolSource="BouncyCastle.Crypto.dll">
+                <Node Bounds="796,920,72,26" Id="CwnSjGRL4XdLYojlrv1Un7">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Crypto.IBufferedCipher" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="DoFinal" />
                     <CategoryReference Kind="AssemblyCategory" Name="IBufferedCipher" NeedsToBeDirectParent="true" />
@@ -357,8 +353,8 @@
                   <Pin Id="EU89va49TFyLvvD6gNu1IC" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="CbF2eYZZnzGPIQy6aaEvBf" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="854,784,108,19" Id="SYa9FmBfpbJOtrnsaX1Asc">
-                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.ParameterUtilities" LastSymbolSource="BouncyCastle.Crypto.dll">
+                <Node Bounds="862,810,108,19" Id="SYa9FmBfpbJOtrnsaX1Asc">
+                  <p:NodeReference LastCategoryFullName="Org.BouncyCastle.Security.ParameterUtilities" LastDependency="BouncyCastle.Crypto.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="CreateKeyParameter" />
                     <PinReference Kind="InputPin" Name="Algorithm" />
@@ -367,8 +363,8 @@
                   <Pin Id="V1YbJJPGcnJMkbhCBWtLDZ" Name="Key Bytes" Kind="InputPin" />
                   <Pin Id="SOJoZz8cZ2OLY4Mmt252Ja" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="955,727,64,26" Id="OhXXdJQ8cZJNCQwtWLW3c3">
-                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastSymbolSource="VL.Collections.vl">
+                <Node Bounds="989,730,64,26" Id="OhXXdJQ8cZJNCQwtWLW3c3">
+                  <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ArrayType" Name="MutableArray" />
                     <Choice Kind="OperationCallFlag" Name="Length" />
@@ -377,8 +373,8 @@
                   <Pin Id="NjoSOCE0gMDLkcLNxBsTQK" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="G5yp2L4zbJoOij042t6aGr" Name="Length" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="868,994,63,19" Id="AR9o1ocX0uMMbXHkkX6wmk">
-                  <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                <Node Bounds="863,980,63,19" Id="AR9o1ocX0uMMbXHkkX6wmk">
+                  <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="CoreLibBasics.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="FromBytes" />
                     <CategoryReference Kind="StringType" Name="String" NeedsToBeDirectParent="true" />
@@ -388,7 +384,7 @@
                   <Pin Id="Vc7E6kUvOJYNoUxATZRKG4" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="858,736,52,19" Id="PC6V4PIdvBYOQpaWFRfSjR">
-                  <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="CoreLibBasics.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="ToBytes (Base64)" />
                   </p:NodeReference>
@@ -397,18 +393,17 @@
                 </Node>
               </Patch>
             </Node>
-            <Pad Id="N2GjfW5YpR5PDVVaiOEMG1" Comment="" Bounds="873,1178,166,15" ShowValueBox="true" isIOBox="true" />
-            <Pad Id="FcxNUl1uOmiPawJuPFP5sc" Comment="Encoding" Bounds="1054,984,93,15" ShowValueBox="true" isIOBox="true" Value="UTF32">
-              <p:TypeAnnotation LastCategoryFullName="Text" LastSymbolSource="CoreLibBasics.vl">
+            <Pad Id="FcxNUl1uOmiPawJuPFP5sc" Comment="Encoding" Bounds="1079,941,95,15" ShowValueBox="true" isIOBox="true" Value="UTF32">
+              <p:TypeAnnotation LastCategoryFullName="Text" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Encodings" />
               </p:TypeAnnotation>
             </Pad>
             <ControlPoint Id="C63Jz5nYMmQNT907C11NFT" Bounds="1010,365" />
-            <ControlPoint Id="O7LVQAJbbGqPNpEDEuivVv" Bounds="858,498" />
-            <ControlPoint Id="MEu9VH5COLEM6pZvFwz8B5" Bounds="698,555" />
-            <ControlPoint Id="Kjk4nWT5rdqPexPW8Yxt31" Bounds="867,1148" />
+            <ControlPoint Id="O7LVQAJbbGqPNpEDEuivVv" Bounds="860,540" />
+            <ControlPoint Id="MEu9VH5COLEM6pZvFwz8B5" Bounds="786,541" />
+            <ControlPoint Id="Kjk4nWT5rdqPexPW8Yxt31" Bounds="865,1081" />
             <Node Bounds="998,548,50,84" Id="NlC3P2FuWjTLPyNdlCFtqV">
-              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ApplicationStatefulRegion" Name="If" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -422,17 +417,18 @@
               <ControlPoint Id="P08HZO2aqQ1PBMyFEvYGKN" Bounds="1031,554" Alignment="Top" />
             </Node>
             <Node Bounds="1088,456,64,26" Id="FVcK0wlZ69QMrrKOynO5jP">
-              <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastSymbolSource="VL.Collections.vl">
+              <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ArrayType" Name="MutableArray" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
               </p:NodeReference>
+              <Pin Id="Uf4yEXc9MdWNvIjBvLPACh" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="B50n3toS69PMzHH7JpvmiX" Name="Length" Kind="InputPin" DefaultValue="16" />
               <Pin Id="BRrRZ7ve0leL4Qm430LBNW" Name="Result" Kind="StateOutputPin" />
             </Node>
             <Pad Id="ClbfW95BC7UPE6O0BRXNz1" SlotId="IundU1Ng98dLVeCc77tVNw" Bounds="1091,517" />
             <Node Bounds="936,432,64,26" Id="D9oi9sVL2HELduMZSYKmIc">
-              <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastSymbolSource="VL.Collections.vl">
+              <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.Collections.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ArrayType" Name="MutableArray" />
                 <Choice Kind="OperationCallFlag" Name="Length" />
@@ -442,7 +438,7 @@
               <Pin Id="DQunhyHc7RtOXL259ypzap" Name="Length" Kind="OutputPin" />
             </Node>
             <Node Bounds="997,509,25,19" Id="BIcltZELSB5LPasZOXUoaI">
-              <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+              <p:NodeReference LastCategoryFullName="Math" LastDependency="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="&gt;" />
               </p:NodeReference>
@@ -450,17 +446,12 @@
               <Pin Id="EbSB6eXhq1pNeo9COmS6Cq" Name="Input 2" Kind="InputPin" DefaultValue="16" />
               <Pin Id="JtQK2fEwtI8MfEnZHYpovf" Name="Result" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="F62N7DHBBlALvBCN8eAeWQ" Bounds="1090,380" />
           </Canvas>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="KfCH7UOCxUbOKtjaN2jgVI">
             <Fragment Id="AEABrzV1x1kO9MpPn6VuYB" Patch="LkR4ZOfsyaiOxiMjI66pP9" Enabled="true" />
             <Fragment Id="PSMT4DeqP7WLmE0sfvcDju" Patch="RLDF2RwA1CVOhnttIdjfuj" Enabled="true" />
           </ProcessDefinition>
-          <Link Id="HB4HruYuychLC7uJZANlqM" Ids="NjoSOCE0gMDLkcLNxBsTQK,V1YbJJPGcnJMkbhCBWtLDZ" />
           <Link Id="T0snUPoYzt9Njf33EBeIC5" Ids="DQWcSylFJoNOGs8qY85O0n,VlWUaL9pAGxM7xC5LrVs3F" />
           <Link Id="Pe6bxRW9QUbNA8WArUNMyl" Ids="FjdfbNbWqpOOzBCKwUJDNs,CGDEfTSpZXcN1J5TIV2nEo" />
           <Link Id="HqMgEcIBlXlNG8ezW7UxwU" Ids="IcdwRYvlHhjPjaQQYonwg5,CARykgMLW76PTs3SAq5wRF" />
@@ -472,12 +463,14 @@
           <Link Id="C10L3NxziXOLWIncgucUdu" Ids="Jyp6kq7X44gQa2b0plBkxN,O7LVQAJbbGqPNpEDEuivVv" IsHidden="true" />
           <Link Id="EU3or5jmQF3MMtNwinR8Zh" Ids="MEu9VH5COLEM6pZvFwz8B5,OnEPNCVKOroPr2mBUvlrhZ" />
           <Link Id="KM25AGpDknVMmSuUNQfP7h" Ids="Kk4SugFkVymOiZ5qfZwsGO,MEu9VH5COLEM6pZvFwz8B5" IsHidden="true" />
-          <Patch Id="LkR4ZOfsyaiOxiMjI66pP9" Name="Create" ParticipatingElements="FVcK0wlZ69QMrrKOynO5jP" />
-          <Patch Id="RLDF2RwA1CVOhnttIdjfuj" Name="Update">
-            <Pin Id="Kk4SugFkVymOiZ5qfZwsGO" Name="Decrypt" Kind="InputPin" Bounds="698,555" />
-            <Pin Id="Jyp6kq7X44gQa2b0plBkxN" Name="EncryptedText" Kind="InputPin" Bounds="856,528" />
+          <Patch Id="LkR4ZOfsyaiOxiMjI66pP9" Name="Create" ParticipatingElements="FVcK0wlZ69QMrrKOynO5jP">
+            <Pin Id="UVwV8T181cZObjN1r3EfVR" Name="Key Length" Kind="InputPin" DefaultValue="24" />
+          </Patch>
+          <Patch Id="RLDF2RwA1CVOhnttIdjfuj" Name="Update" ManuallySortedPins="true">
             <Pin Id="HhUsx19KGMsLSQYnPlp3Ur" Name="Key" Kind="InputPin" Bounds="954,505" />
-            <Pin Id="OIcoNXDFIkCPWwcfY5z5Rs" Name="Text" Kind="OutputPin" Bounds="867,1148" />
+            <Pin Id="OIcoNXDFIkCPWwcfY5z5Rs" Name="Decrypted Text" Kind="OutputPin" Bounds="867,1148" />
+            <Pin Id="Jyp6kq7X44gQa2b0plBkxN" Name="EncryptedText" Kind="InputPin" Bounds="856,528" />
+            <Pin Id="Kk4SugFkVymOiZ5qfZwsGO" Name="Decrypt" Kind="InputPin" Bounds="698,555" />
           </Patch>
           <Link Id="GJnzxSZ696BNC4IDWOeENE" Ids="CbF2eYZZnzGPIQy6aaEvBf,GxmFYUTvViALlKuhLROUWp" />
           <Link Id="PuQNauEmJopPEywG2Xukeu" Ids="Vc7E6kUvOJYNoUxATZRKG4,OWQPm4oE2U7QTxXjRInCxI" />
@@ -495,6 +488,9 @@
           <Link Id="SGbYZwTvi9FNVuzPGgTqIb" Ids="C63Jz5nYMmQNT907C11NFT,MUi7QIMnM6ALmWdq8ieGjv" />
           <Link Id="TQvVK4DvoMFNFmjq4bZNJS" Ids="DQunhyHc7RtOXL259ypzap,BCRmmcQP4o3QC09w4A2LIT" />
           <Link Id="KbrC0oQVNDAN4WGabLNfyu" Ids="JtQK2fEwtI8MfEnZHYpovf,UIik6kTYx6EP2DAiqQVNBA" />
+          <Link Id="OsjpbRFI0JbLFubnUQv6cm" Ids="F62N7DHBBlALvBCN8eAeWQ,B50n3toS69PMzHH7JpvmiX" />
+          <Link Id="DMWM8QV5Z7YMAwqxegJLBf" Ids="UVwV8T181cZObjN1r3EfVR,F62N7DHBBlALvBCN8eAeWQ" IsHidden="true" />
+          <Link Id="VwPak2UqdG1OmhrCP7VOwR" Ids="S1HEE8KDXUIMTFolLhfUR3,V1YbJJPGcnJMkbhCBWtLDZ" />
         </Patch>
       </Node>
     </Canvas>
@@ -509,94 +505,16 @@
         <FullNameCategoryReference ID="Primitive" />
       </p:NodeReference>
       <Patch Id="Jrp1ieQRe6ROKHPphAY74z">
-        <Canvas Id="FpSXgDnq8AaL5Ap6Av5tCr" CanvasType="Group">
-          <Node Bounds="551,273,78,19" Id="Vyu2XegxXzhLYIsFnKJNuC">
-            <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.BouncyCastle.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="KeyGenerator" />
-            </p:NodeReference>
-            <Pin Id="EdmC9ar1rW4QFYGjHXJt0u" Name="Generate" Kind="InputPin" />
-            <Pin Id="VqVG0EjYLVYLeVD0HHs6gn" Name="Length" Kind="InputPin" DefaultValue="24" />
-            <Pin Id="MH4C2NaiUGOQVWwYILQB0R" Name="KeyString" Kind="OutputPin" />
-            <Pin Id="UBMvSYHVzbsLbhgle0v7nX" Name="KeyBytes" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="467,448,81,19" Id="FzXUOyqGM7jMCws6UY9D4q">
-            <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.BouncyCastle.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="AESEncryption" />
-            </p:NodeReference>
-            <Pin Id="E6gXxVnTVg1OmcQ7R6BNNo" Name="Encrypt" Kind="InputPin" />
-            <Pin Id="N2NQB0uGo6pPdJUdULxa21" Name="Text" Kind="InputPin" />
-            <Pin Id="EHXExDoWJGBQIFrwNmCkGK" Name="Key " Kind="InputPin" />
-            <Pin Id="NLPjJXYRaQpN7LVazhyysF" Name="EncryptedText" Kind="OutputPin" />
-          </Node>
-          <Pad Id="Jo5qhhMAHeJNdCMdnHyr0t" Comment="Generate" Bounds="554,205,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation>
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="ECYGi3DaRlVP9z8e4n2j8F" Comment="Text" Bounds="504,379,72,16" ShowValueBox="true" isIOBox="true" Value="hello vvvv">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Node Bounds="405,619,134,19" Id="QCBu51B4xXGQXlX4fHpBMy">
-            <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.BouncyCastle.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="AESDecryption" />
-            </p:NodeReference>
-            <Pin Id="FDgZRMwQrDhP8pUiVeHCEK" Name="Decrypt" Kind="InputPin" />
-            <Pin Id="GNilJG1PoT2LvkkHCX91zZ" Name="EncryptedText" Kind="InputPin" />
-            <Pin Id="GkjjolDQzxQODXzAlKcvaj" Name="Key" Kind="InputPin" />
-            <Pin Id="GkLzkHk99WAMe2BQg0eYGL" Name="Text" Kind="OutputPin" />
-          </Node>
-          <Pad Id="U8GlJZdet6GNzMdFEP8YAY" Comment="Text" Bounds="407,702,122,17" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="QrEn6j1pQeWP08eYWa9WAa" Comment="Decrypt" Bounds="373,533,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation>
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="L9s0my4DQy9MNJw7Z1kxQN" Comment="Encrypt" Bounds="423,351,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation>
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <ControlPoint Id="M27bb3uKT6APlFvpAn8sBA" Bounds="627,581" />
-          <ControlPoint Id="OkJFs0G7iybOhjqqrBAuav" Bounds="627,421" />
-          <Pad Id="HOPxV0uQlInPvBWJPQB81X" Comment="KeyString" Bounds="553,309,260,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="RmjX0rz95g5PiTPY81xi6D" Comment="EncryptedText" Bounds="470,513,384,17" ShowValueBox="true" isIOBox="true" />
-        </Canvas>
+        <Canvas Id="FpSXgDnq8AaL5Ap6Av5tCr" CanvasType="Group" />
         <Patch Id="VBrwW7uKuktL2qzy63TUXp" Name="Create" />
         <Patch Id="A8bvifGT1bGNVWJHmT8TEv" Name="Update" />
         <ProcessDefinition Id="FeCqJ06tdHrPDYid7wuzL0">
           <Fragment Id="So6LVie0LBZQJOo4ZyUudk" Patch="VBrwW7uKuktL2qzy63TUXp" Enabled="true" />
           <Fragment Id="FHy0O7nalgyOpaHCHdo7Pj" Patch="A8bvifGT1bGNVWJHmT8TEv" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="CIMg09wpJdFOpuwLaeOlv0" Ids="Jo5qhhMAHeJNdCMdnHyr0t,EdmC9ar1rW4QFYGjHXJt0u" />
-        <Link Id="VfQSKz5AWVmOGfIJOEKjYv" Ids="UBMvSYHVzbsLbhgle0v7nX,OkJFs0G7iybOhjqqrBAuav,EHXExDoWJGBQIFrwNmCkGK" />
-        <Link Id="J51KTch2aFIOAM3YPdo8TG" Ids="ECYGi3DaRlVP9z8e4n2j8F,N2NQB0uGo6pPdJUdULxa21" />
-        <Link Id="Of1YcPrX1aQP2RPgUGPGio" Ids="UBMvSYHVzbsLbhgle0v7nX,M27bb3uKT6APlFvpAn8sBA,GkjjolDQzxQODXzAlKcvaj" />
-        <Link Id="J1tR04EGLCNMewXnibpf2t" Ids="GkLzkHk99WAMe2BQg0eYGL,U8GlJZdet6GNzMdFEP8YAY" />
-        <Link Id="J1ne2Mkg8dWLO2igPV8bSi" Ids="QrEn6j1pQeWP08eYWa9WAa,FDgZRMwQrDhP8pUiVeHCEK" />
-        <Link Id="IJOOOC75en4NOUe1YIm4Tb" Ids="L9s0my4DQy9MNJw7Z1kxQN,E6gXxVnTVg1OmcQ7R6BNNo" />
-        <Link Id="EMq9dxjoWSHLJQDq8udNTw" Ids="MH4C2NaiUGOQVWwYILQB0R,HOPxV0uQlInPvBWJPQB81X" />
-        <Link Id="SkQ2ObPLclkNjU5m7Bx4D7" Ids="NLPjJXYRaQpN7LVazhyysF,RmjX0rz95g5PiTPY81xi6D" />
-        <Link Id="L9RshuDm8P8NIJR9rzyzho" Ids="RmjX0rz95g5PiTPY81xi6D,GNilJG1PoT2LvkkHCX91zZ" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="FSZd1r7s1sZQGKB1HwndNW" Location="VL.CoreLib" Version="2021.4.8-0940-g49c97a1c2c" />
+  <NugetDependency Id="FSZd1r7s1sZQGKB1HwndNW" Location="VL.CoreLib" Version="2025.7.0" />
   <NugetDependency Id="LiC5jMGsL7XOghBnultBry" Location="Portable.BouncyCastle" Version="1.9.0" />
 </Document>

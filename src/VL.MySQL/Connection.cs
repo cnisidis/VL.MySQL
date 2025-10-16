@@ -120,13 +120,46 @@ namespace VL.MySQL
             return await command.ExecuteNonQueryAsync();
         }
 
+        public async Task<int> NonQuery(string TextCommand, Spread<MySqlParameter> parameters)
+        {
+
+            await using var command = new MySqlCommand(TextCommand, connection);
+            command.Parameters.AddRange(parameters.ToArray());
+            command.Prepare();
+            
+            return await command.ExecuteNonQueryAsync();
+        }
+
+        public async Task<int> NonQuery(MySqlCommand Command)
+        {
+            Command.Connection = connection;
+            await using var command = Command;
+            
+            
+
+            return await command.ExecuteNonQueryAsync();
+        }
+
         public async Task<object> Scalar(string textCommand)
         {
             await using var command = new MySqlCommand(textCommand, connection);
+            
             return await command.ExecuteScalarAsync();
         }
 
-        
+        public async Task<Spread<T>> Query<T>(Func<IDataReader, T> Delegate, string textCommand)
+        {
+            await using var command = new MySqlCommand(textCommand, connection);
+            await using var reader = await command.ExecuteReaderAsync();
+            List<T> results = new List<T>();
+            while (await reader.ReadAsync())
+            {
+                results.Add((T)Delegate.DynamicInvoke(reader));
+            }
+            return results.ToSpread();
+        }
+
+
 
         public string State() => connection.State.ToString();
     }
